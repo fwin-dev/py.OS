@@ -1,5 +1,5 @@
 *.pyc
 .project
 .pydevproject
-build
-pyOS.egg-info
+src/py.OS.egg-info
+dist
