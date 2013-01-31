@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 import sys
-if sys.version_info[0] == 3 or sys.version_info <= (2,5):
+if sys.version_info[0] >= 3 or sys.version_info <= (2,5):
 	raise Exception("This module only supports Python 2.6 or 2.7")
 
 def isAptOS():
@@ -44,7 +44,6 @@ setup(
 #		]
 	},
 #	namespace_packages = ["Common"],
-#	requires_python = ">=2.6,<3",
 	install_requires = dependencies,
 #    include_package_data = True,
 	exclude_package_data = {"": ["*.pyc", ".DS_Store"]},

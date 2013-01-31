@@ -9,7 +9,7 @@ class _YumDummyCallback(object):
 
 class _EPEL:
 	def _findBestEPEL(self):
-		from pyNet.HTTPIndex_FindLatestFile import findLatestFile
+		from Net.HTTPIndex_FindLatestFile import findLatestFile
 		epelURL = "http://dl.fedoraproject.org/pub/epel/" + _OS.version[0] + "/i386/"
 		return findLatestFile(epelURL, "epel-release-")
 	
@@ -19,8 +19,8 @@ class _EPEL:
 	def install(self):
 		if not self.hasEPEL():
 			print("===Installing EPEL repository...\n")
-			_OS.pkg.repoInstall(self._findBestEPEL(), "epel")
-			_OS.pkg.repoInstallAllKeys()
+			_OS.pkg.installRepo_RPM(self._findBestEPEL(), "epel")
+			_OS.pkg.installRepo_allKeys()
 
 class YumInstaller:
 	def __init__(self):
@@ -49,7 +49,7 @@ class YumInstaller:
 		
 		return yum
 	
-	def repoInstall(self, rpmURL, commonRepoName):
+	def installRepo_RPM(self, rpmURL, commonRepoName):
 		_OS.hasRootPermissions(assertTrue=True, shouldExit=True)
 		_OS.runCMD("rpm -Uvh %s", rpmURL)
 		self._yum = self._init()	# needed to recognize new repo
@@ -58,7 +58,7 @@ class YumInstaller:
 		_OS.runCMD("rpm --import %s", repos[0].gpgkey[0])
 		self.needsRepoUpdate = True
 	
-	def repoInstallAllKeys(self):
+	def installRepo_allKeys(self):
 		""" Installs all keys for repo rpms already present on the system """
 		_OS.hasRootPermissions(assertTrue=True, shouldExit=True)
 		
@@ -66,7 +66,7 @@ class YumInstaller:
 			for key in self._yum.repos.repos[repoName].gpgkey:
 				_OS.runCMD("rpm --import %s", key)
 	
-	def repoInstall_EPEL(self):
+	def installRepo_EPEL(self):
 		_EPEL().install()
 	
 	def _updatePackageIndex(self):
