@@ -34,7 +34,6 @@ setup(
     name = "py.OS",
     version = "0.5.0",
     description = "Attempts to provide common operating system functions that are platform independent",
-	long_description = "See HTML documentation for features and usage",
     author = "Jesse Cowles",
     author_email = "jcowles@indigital.net",
 	url = "http://projects.indigitaldev.net/py.OS",
