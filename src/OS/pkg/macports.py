@@ -31,9 +31,9 @@ class MacPortInstaller:
 		if packageNames == None:
 			_OS.runCMD("port upgrade outdated")
 		elif hasattr(packageNames, "__iter__") and len(packageNames) > 0:
-			_OS.runCMD("port upgrade" + (" %s" * len(packageNames)))
+			_OS.runCMD("port upgrade" + (" %s" * len(packageNames)), packageNames)
 	
-	def remove(self, packageNames, purgeConfigFiles=False):
+	def remove(self, packageNames):
 		if isinstance(packageNames, str):
 			packageNames = [packageNames]
 		packageNames = filter(lambda x: self.isInstalled(x), packageNames)
@@ -41,8 +41,7 @@ class MacPortInstaller:
 		if len(packageNames) > 0:
 			_OS.hasRootPermissions(assertTrue=True, shouldExit=True)
 			for pkgName in packageNames:
-				self._apt[pkgName].mark_delete(purge = purgeConfigFiles)
-			self._apt.commit()
+				_OS.runCMD("port uninstall --follow-dependencies %s", pkgName)
 	
 	def isInstalled(self, packageName):
 		for line in _OS.runCMD("port installed").stdout.split("\n"):
