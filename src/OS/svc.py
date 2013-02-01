@@ -30,4 +30,4 @@ def remove(serviceName):
     if pkg.isAptOS():
         _OS.runCMD("sudo update-rc.d -f %s remove", serviceName)
     elif pkg.isYumOS():
-        sys.exit("Not yet implemented")
+        raise NotImplemented	# TODO

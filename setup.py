@@ -23,15 +23,18 @@ if isAptOS():
 # red hat based OSs come with a python yum module already installed
 # macport CLI is used on OSX, so no modules for it
 
+
+# install from a private server using:
+# pip install py.OS --index-url http://your-pypi-server/simple
+
+# reference URLs:
+# http://docs.python.org/2/distutils/setupscript.html
+# http://packages.python.org/distribute/setuptools.html
 setup(
     name = "py.OS",
     version = "0.5.0",
     description = "Attempts to provide common operating system functions that are platform independent",
-	long_description = """\
-		Attempts to provide common operating system functions that are platform independent, including:
-			- Interacting with the OS package manager (apt, yum, macports) - installing, removing, upgrading, etc.
-			- Interacting with operating system services - start, stop, restart, set boot state, etc.
-		""",
+	long_description = "See HTML documentation for features and usage",
     author = "Jesse Cowles",
     author_email = "jcowles@indigital.net",
 	url = "http://projects.indigitaldev.net/py.OS",

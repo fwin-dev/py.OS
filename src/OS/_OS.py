@@ -16,6 +16,14 @@ class _OS:
 	
 	@classmethod
 	def hasRootPermissions(cls, assertTrue=False, shouldExit=True):
+		"""
+		Determines if your python script was invoked by a user with root permissions (run as root or using sudo).
+		
+		If assertTrue, will throw an Exception if no root permissions.
+		If shouldExit, your program will exit if no root permissions.
+		If assertTrue and shouldExit are false, returns True if script has root permissions, False otherwise.
+		"""
+		
 		if assertTrue and os.geteuid() != 0:
 			raise Exception()
 			if not shouldExit:
@@ -25,25 +33,20 @@ class _OS:
 		return os.geteuid()==0
 	
 	@classmethod
-	def getPyExe(cls):
-		from py_version import PY_EXE
-		return PY_EXE
-	@classmethod
-	def changeConfig(cls, _file, newLine, commentChar='#', assignChar=' ', sectionName=None, sectionMatch='['):
-		import ConfigParser_m1
-		return ConfigParser_m1.changeConfig(_file, newLine, commentChar, assignChar, sectionName, sectionMatch)
-	@classmethod
-	def getRandomDir(cls):
-		LENGTH = 6
-		_dir = ''.join(random.choice(string.ascii_letters + string.digits) for i in range(LENGTH))
-		_dir = "/tmp/py_" + _dir
-		return _dir
-	@classmethod
-	def askYesNo(cls, question):
-		return raw_input(question + " [y/n]: ").lower() in ["y", "yes"]
-	
-	@classmethod
 	def runCMD(cls, command, params=None, assertSuccess=True, useBash=False, variables=None, printOutput=False, inputStr=None):
+		"""
+		Runs a command on the terminal.
+		
+		params			--- Tuple or list of parameters to substitute into command. Command must contain a %s for each parameter.
+		assertSuccess	--- If True, will throw an Exception if the command returns a non-zero exit code.
+		useBash			--- Use the bash environment to execute the command.
+		variables		--- Environment variables to set before the command executes.
+		printOutput		--- If True, prints the stdout of the command to the screen.
+		inputStr		--- A string to write to the process's stdin.
+		
+		Returns a CMDProcOutput instance for accessing the stdout, stderr, and return code of the process.
+		"""
+		
 		if params != None:
 			if not hasattr(params, "__iter__"):
 				params = (params,)

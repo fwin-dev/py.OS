@@ -8,7 +8,10 @@ else:
 	__DIST_FUNC = __platform.linux_distribution
 
 flavor = __DIST_FUNC()[0].lower()
+"""This will always be lower case. Examples: "centos", "darwin", "ubuntu"."""
+
 version = __DIST_FUNC()[1]
+
 if __DIST_FUNC()[0] == "redhat" and __DIST_FUNC()[2] == "Final":   # fix for centos 5
 	flavor = "centos"
 elif __platform.system() == "Darwin":

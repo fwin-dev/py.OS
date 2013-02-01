@@ -55,6 +55,11 @@ class AptInstaller:
 		_OS.runCMD("sudo apt-get dist-upgrade")
 	
 	def remove(self, packageNames, purgeConfigFiles=False):
+		"""
+		Removes the specified package(s).
+		
+		purgeConfigFiles	--- When True, does the equivalent of an apt-get purge
+		"""
 		if isinstance(packageNames, str):
 			packageNames = [packageNames]
 		packageNames = filter(lambda x: self.isInstalled(x), packageNames)

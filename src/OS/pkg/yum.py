@@ -50,6 +50,11 @@ class YumInstaller:
 		return yum
 	
 	def installRepo_RPM(self, rpmURL, commonRepoName):
+		"""
+		Installs a new repository from an RPM.
+		
+		commonRepoName	--- The name used by yum for the repository. For example, "epel".
+		"""
 		_OS.hasRootPermissions(assertTrue=True, shouldExit=True)
 		_OS.runCMD("rpm -Uvh %s", rpmURL)
 		self._yum = self._init()	# needed to recognize new repo

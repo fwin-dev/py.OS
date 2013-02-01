@@ -1,5 +1,5 @@
 *.pyc
 .project
 .pydevproject
-src/py.OS.egg-info
+*.egg-info
 dist
