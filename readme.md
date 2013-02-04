@@ -17,7 +17,7 @@ Note that for most of the functions/methods on this page, arguments are not list
 # Detailed functionality
 
 ## Python version information
-The following is accessible by using the PyVersion module:
+The following is accessible by using the [PyVersion](@ref OS.PyVersion) module:
 
 	import PyVersion
 
@@ -34,16 +34,16 @@ The following is accessible by using the OS module:
 	import OS
 
 ### Determining what OS is running
-	[OS.flavor](@ref OS.DescribeOS.flavor)
+	OS.flavor
 
 ### Determining the OS version
-	[OS.version](@ref OS.DescribeOS.version)
+	OS.version
 
 ### Determining if an OS is unix/unix-like (Linux, Darwin, etc.)
 	OS.isUnix()
 
 ### Determine if your python script has root permissions (ran as root or using sudo)
-	[OS.hasRootPermissions()](@ref OS._OS._OS.hasRootPermissions)
+	OS.hasRootPermissions()
 
 ### Run a command in the terminal
 There are lots of arguments here. Refer to the code!
