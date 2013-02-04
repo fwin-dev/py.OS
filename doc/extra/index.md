@@ -17,10 +17,11 @@ Note that for most of the functions/methods on this page, arguments are not list
 # Detailed functionality
 
 ## Python version information
+
 The following is accessible by using the PyVersion module:
-~~~{.py}
+
 	import PyVersion
-~~~
+
 ### Determining the executable path or name of the currently running python interpreter
 
 	PyVersion.PY_EXE
@@ -32,6 +33,7 @@ The following is accessible by using the PyVersion module:
 ---
 
 ## Retrieving information about the OS and performing common OS-related functions
+
 The following is accessible by using the OS module:
 
 	import OS
@@ -53,6 +55,7 @@ The following is accessible by using the OS module:
 	OS.hasRootPermissions()
 
 ### Run a command in the terminal
+
 There are lots of arguments here. Refer to the code!
 
 	OS.runCMD()
@@ -60,6 +63,7 @@ There are lots of arguments here. Refer to the code!
 ---
 
 ## System services
+
 The following is accessible by using the services module:
 
 	import OS.svc
@@ -73,6 +77,7 @@ These features are self-explanatory with a quick glance at the code.
 ---
 
 ## System software packages
+
 The following is accessible by using the packages module:
 
 	import OS.pkg
@@ -108,6 +113,7 @@ Also, when using install, update, isAvailable, and similar functions, there is n
 	OS.pkg.isAvailable()
 
 ### Installing a package
+
 See above. You can also install an iterable of packages like:
 
 	OS.pkg.install(("nano", "vim", "emacs"))
@@ -133,6 +139,7 @@ See above. You can also install an iterable of packages like:
 	OS.pkg.installRepo_allKeys()
 
 ##### Installing EPEL on yum
+
 This is a convenience method for installing EPEL. The latest EPEL RPM will be fetched.
 
 	OS.pkg.installRepo_EPEL()
@@ -140,6 +147,7 @@ This is a convenience method for installing EPEL. The latest EPEL RPM will be fe
 ---
 
 ## GPG
+
 The following is accessible by using the GPG module:
 
 	from OS import GPG
