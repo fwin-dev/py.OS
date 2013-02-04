@@ -17,13 +17,16 @@ Note that for most of the functions/methods on this page, arguments are not list
 # Detailed functionality
 
 ## Python version information
-The following is accessible by using the [PyVersion](@ref OS.PyVersion) module:
-
+The following is accessible by using the PyVersion module:
+~~~{.py}
 	import PyVersion
-
+~~~
 ### Determining the executable path or name of the currently running python interpreter
+
 	PyVersion.PY_EXE
+
 ### Finding a suitable installed version of python to run your code
+
 	PyVersion.checkSuitablePyExe()
 
 ---
@@ -34,15 +37,19 @@ The following is accessible by using the OS module:
 	import OS
 
 ### Determining what OS is running
+
 	OS.flavor
 
 ### Determining the OS version
+
 	OS.version
 
 ### Determining if an OS is unix/unix-like (Linux, Darwin, etc.)
+
 	OS.isUnix()
 
 ### Determine if your python script has root permissions (ran as root or using sudo)
+
 	OS.hasRootPermissions()
 
 ### Run a command in the terminal
@@ -89,12 +96,15 @@ The bad news is that sometimes a package will have a different name across diffe
 Also, when using install, update, isAvailable, and similar functions, there is no need to manually update the list of available packages from the internet. This is done automatically when OS.pkg is imported.
 
 ### Checking if the pkg module supports your OS
+
 	OS.pkg.isSupported()
 
 ### Checking if a package is installed
+
 	OS.pkg.isInstalled()
 
 ### Checking if a package is available for install
+
 	OS.pkg.isAvailable()
 
 ### Installing a package
@@ -103,17 +113,22 @@ See above. You can also install an iterable of packages like:
 	OS.pkg.install(("nano", "vim", "emacs"))
 
 ### Upgrading/updating existing packages
+
 	OS.pkg.update()
 
 ### Removing/uninstalling a package
+
 	OS.pkg.remove()
+
 - On apt, an additional argument `purgeConfigFiles` can be specified which, when `True`, is identical to `apt-get purge`
 
 ### Platform-specific functions
 #### Updating the kernel on apt
+
 	OS.pkg.updateKernel()
 
 #### Installing a 3rd party repository on yum
+
 	OS.pkg.installRepo_RPM()
 	OS.pkg.installRepo_allKeys()
 
