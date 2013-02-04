@@ -4,7 +4,9 @@ import _OS
 import sys
 
 """
+@package OS.svc
 Service module can change the state of a service.
+
 Supported operating systems include Debian based and Red Hat based.
 """
 

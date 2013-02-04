@@ -1,0 +1,5 @@
+<map id="OS.pkg.yum._EPEL.isInstalled" name="OS.pkg.yum._EPEL.isInstalled">
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1yum_1_1_yum_installer.html#aa33eadba0696d51bd35e3591635b67cf" title="OS.pkg.yum.YumInstaller.install" alt="" coords="253,12,451,39"/>
+<area shape="rect" id="node7" href="$class_o_s_1_1pkg_1_1yum_1_1_yum_installer.html#ac39974d4ee37fbc195eda54f2fccc438" title="OS.pkg.yum.YumInstaller.remove" alt="" coords="248,63,456,89"/>
+<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1yum_1_1_yum_installer.html#aefad82c28852c4cec1fdb66892956dbd" title="OS.pkg.yum.YumInstaller.install\lRepo_EPEL" alt="" coords="505,5,703,46"/>
+</map>

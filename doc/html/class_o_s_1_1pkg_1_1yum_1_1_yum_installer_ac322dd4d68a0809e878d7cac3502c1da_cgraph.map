@@ -1,0 +1,5 @@
+<map id="OS.pkg.yum.YumInstaller.update" name="OS.pkg.yum.YumInstaller.update">
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1apt_1_1_apt_installer.html#a721544fb2131f2396926e557aa2e44a1" title="OS.pkg.apt.AptInstaller.\l_updatePackageIndex" alt="" coords="291,5,447,46"/>
+<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1macports_1_1_mac_port_installer.html#a36a164a74432a3d803e2e48e2c9d3709" title="OS.pkg.macports.MacPortInstaller.\l_updatePackageIndex" alt="" coords="261,70,477,111"/>
+<area shape="rect" id="node7" href="$class_o_s_1_1pkg_1_1yum_1_1_yum_installer.html#afadf31d60f42e27a9f3f9bdb49a991c1" title="OS.pkg.yum.YumInstaller.\l_updatePackageIndex" alt="" coords="286,135,453,177"/>
+</map>

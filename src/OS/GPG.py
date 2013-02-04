@@ -3,6 +3,7 @@ import OS
 import os, os.path
 
 class GPG(object):
+	"""Quick GNUPG implementation with common functions, using the command line interface."""
 	def import_(self, keyFile):
 		keyFile = str(keyFile)
 		OS.runCMD("gpg --batch --import %s", keyFile)
@@ -12,10 +13,19 @@ class GPG(object):
 		# LIMITATION: owner trust of key can't be set non-interactively for it due to limitations in the gnupg interface
 	
 	def isKeyImported(self, id):
-		""" id: an 8 or 16 character hex string """
+		"""
+		Checks if a key is imported into the local keyring.
+		
+		@param id	str:	An 8 or 16 character hex string
+		"""
 		return id + ":" in OS.runCMD("gpg --list-secret-keys --with-colons").stdout
 	
 	def getKeyID(self, filename):
+		"""
+		Gets first key ID of the key in filename.
+		
+		@return str:	8 character hex string
+		"""
 		filename = str(filename)
 		
 		id_ = None
@@ -28,6 +38,16 @@ class GPG(object):
 		return id_
 	
 	def encrypt(self, inputFilePath, keyID):
+		"""
+		Encrypts a file.
+		
+		Note that the necessary keys must already be imported, signed, and trusted in the local keyring
+		in order for encryption to work.
+		
+		@param inputFilePath	str:	File to encrypt. Will not be modified.
+		@param keyID			str:	An 8 or 16 character hex string
+		@return					str:	Path of the encrypted file
+		"""
 		inputFilePath = str(inputFilePath)
 		outputFilePath = inputFilePath + ".pgp"
 		if os.path.exists(outputFilePath):
@@ -36,6 +56,16 @@ class GPG(object):
 		return outputFilePath
 	
 	def decrypt(self, inputFilePath, password):
+		"""
+		Decrypts a file.
+		
+		Note that the necessary keys must already be imported, signed, and trusted in the local keyring
+		in order for decryption to work.
+		
+		@param inputFilePath	str:	File to decrypt. Must have .pgp extension. Will not be modified.
+		@param password			str:	Password of private key in keyring
+		@return					str:	Path of the decrypted file
+		"""
 		inputFilePath = str(inputFilePath)
 		assert inputFilePath.endswith(".pgp")
 		outputFilePath = os.path.splitext(inputFilePath)[0]

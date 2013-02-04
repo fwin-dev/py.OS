@@ -2,6 +2,8 @@
 
 The OS module provides common operating system functions that are platform independent.
 
+Note that for most of the functions/methods on this page, arguments are not listed. You should look at the source code to determine the arguments needed.
+
 # Summary of functionality
 
 * Finding a suitable version of python installed in the OS for compatibility reasons
@@ -22,7 +24,7 @@ The following is accessible by using the PyVersion module:
 ### Determining the executable path or name of the currently running python interpreter
 	PyVersion.PY_EXE
 ### Finding a suitable installed version of python to run your code
-	PyVersion.checkSuitablePyExe(...)
+	PyVersion.checkSuitablePyExe()
 
 ---
 
@@ -32,21 +34,21 @@ The following is accessible by using the OS module:
 	import OS
 
 ### Determining what OS is running
-	OS.flavor
+	[OS.flavor](@ref OS.DescribeOS.flavor)
 
 ### Determining the OS version
-	OS.version
+	[OS.version](@ref OS.DescribeOS.version)
 
 ### Determining if an OS is unix/unix-like (Linux, Darwin, etc.)
-	OS.isUnix(...)
+	OS.isUnix()
 
 ### Determine if your python script has root permissions (ran as root or using sudo)
-	OS.hasRootPermissions(...)
+	[OS.hasRootPermissions()](@ref OS._OS._OS.hasRootPermissions)
 
 ### Run a command in the terminal
-There are lots of options here. Refer to the code!
+There are lots of arguments here. Refer to the code!
 
-	OS.runCMD(...)
+	OS.runCMD()
 
 ---
 
@@ -90,10 +92,10 @@ Also, when using install, update, isAvailable, and similar functions, there is n
 	OS.pkg.isSupported()
 
 ### Checking if a package is installed
-	OS.pkg.isInstalled(...)
+	OS.pkg.isInstalled()
 
 ### Checking if a package is available for install
-	OS.pkg.isAvailable(...)
+	OS.pkg.isAvailable()
 
 ### Installing a package
 See above. You can also install an iterable of packages like:
@@ -101,10 +103,10 @@ See above. You can also install an iterable of packages like:
 	OS.pkg.install(("nano", "vim", "emacs"))
 
 ### Upgrading/updating existing packages
-	OS.pkg.update(...)
+	OS.pkg.update()
 
 ### Removing/uninstalling a package
-	OS.pkg.remove(...)
+	OS.pkg.remove()
 - On apt, an additional argument `purgeConfigFiles` can be specified which, when `True`, is identical to `apt-get purge`
 
 ### Platform-specific functions
@@ -112,7 +114,7 @@ See above. You can also install an iterable of packages like:
 	OS.pkg.updateKernel()
 
 #### Installing a 3rd party repository on yum
-	OS.pkg.installRepo_RPM(...)
+	OS.pkg.installRepo_RPM()
 	OS.pkg.installRepo_allKeys()
 
 ##### Installing EPEL on yum
@@ -123,11 +125,19 @@ This is a convenience method for installing EPEL. The latest EPEL RPM will be fe
 ---
 
 ## GPG
-These features are self-explanatory with a quick glance at the code.
+The following is accessible by using the GPG module:
+
+	from OS import GPG
+
+These features are self-explanatory with a quick glance at the code in OS.GPG
 
 ### Import a key to the local keyring
+
 ### Get a key's ID
+
 ### Check if a key is imported
+
 ### Encrypt a file
+
 ### Decrypt a file
 

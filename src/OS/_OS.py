@@ -19,9 +19,9 @@ class _OS:
 		"""
 		Determines if your python script was invoked by a user with root permissions (run as root or using sudo).
 		
-		If assertTrue, will throw an Exception if no root permissions.
-		If shouldExit, your program will exit if no root permissions.
-		If assertTrue and shouldExit are false, returns True if script has root permissions, False otherwise.
+		@param assertTrue	bool:	Will throw an Exception if no root permissions.
+		@param shouldExit	bool:	If True, your program will exit if there are no root permissions.
+		@return				bool:	True if script has root permissions, False otherwise.
 		"""
 		
 		if assertTrue and os.geteuid() != 0:
@@ -30,21 +30,21 @@ class _OS:
 				raise Exception("You must run this script with sudo or as root")
 			else:
 				sys.exit("You must run this script with sudo or as root")
-		return os.geteuid()==0
+		return os.geteuid() == 0
 	
 	@classmethod
 	def runCMD(cls, command, params=None, assertSuccess=True, useBash=False, variables=None, printOutput=False, inputStr=None):
 		"""
 		Runs a command on the terminal.
 		
-		params			--- Tuple or list of parameters to substitute into command. Command must contain a %s for each parameter.
-		assertSuccess	--- If True, will throw an Exception if the command returns a non-zero exit code.
-		useBash			--- Use the bash environment to execute the command.
-		variables		--- Environment variables to set before the command executes.
-		printOutput		--- If True, prints the stdout of the command to the screen.
-		inputStr		--- A string to write to the process's stdin.
+		@param params			iterable(str):	Parameters to substitute into command. If given, command must contain a %s for each parameter.
+		@param assertSuccess	bool:			If True, will throw an Exception if the command returns a non-zero exit code.
+		@param useBash			bool:			Use the bash environment to execute the command.
+		@param variables		dict{str:str}:	Environment variables to set before the command executes. The keys are environment variable names.
+		@param printOutput		bool:			If True, prints the stdout of the command to the screen.
+		@param inputStr			str:			A string to write to the process's stdin.
 		
-		Returns a CMDProcOutput instance for accessing the stdout, stderr, and return code of the process.
+		@return CMDProcOutput: An instance through which stdout, stderr, and return code of the process can be accessed.
 		"""
 		
 		if params != None:

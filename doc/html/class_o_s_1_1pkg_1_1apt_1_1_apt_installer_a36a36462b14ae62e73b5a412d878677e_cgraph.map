@@ -1,0 +1,5 @@
+<map id="OS.pkg.apt.AptInstaller.update" name="OS.pkg.apt.AptInstaller.update">
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1apt_1_1_apt_installer.html#a721544fb2131f2396926e557aa2e44a1" title="OS.pkg.apt.AptInstaller.\l_updatePackageIndex" alt="" coords="490,5,646,46"/>
+<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1apt_1_1_apt_installer.html#a1288a2bbb73a4afd5b342eda453787a0" title="OS.pkg.apt.AptInstaller.install" alt="" coords="251,63,437,89"/>
+<area shape="rect" id="node7" href="$class_o_s_1_1pkg_1_1apt_1_1_apt_installer.html#a9805006eff347a5957a9b4310b97df5c" title="OS.pkg.apt.AptInstaller.is\lInstalled" alt="" coords="485,70,651,111"/>
+</map>
