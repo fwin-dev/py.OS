@@ -181,7 +181,7 @@ Public Member Functions</h2></td></tr>
 <p>Determines if your python script was invoked by a user with root permissions (run as root or using sudo). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">assertTrue</td><td>bool: Will throw an <a class="el" href="class_exception.html">Exception</a> if no root permissions. </td></tr>
+    <tr><td class="paramname">assertTrue</td><td>bool: Will throw an Exception if no root permissions. </td></tr>
     <tr><td class="paramname">shouldExit</td><td>bool: If True, your program will exit if there are no root permissions. </td></tr>
   </table>
   </dd>
@@ -267,7 +267,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">params</td><td>iterable(str): Parameters to substitute into command. If given, command must contain a s for each parameter. </td></tr>
-    <tr><td class="paramname">assertSuccess</td><td>bool: If True, will throw an <a class="el" href="class_exception.html">Exception</a> if the command returns a non-zero exit code. </td></tr>
+    <tr><td class="paramname">assertSuccess</td><td>bool: If True, will throw an Exception if the command returns a non-zero exit code. </td></tr>
     <tr><td class="paramname">useBash</td><td>bool: Use the bash environment to execute the command. </td></tr>
     <tr><td class="paramname">variables</td><td>dict{str:str}: Environment variables to set before the command executes. The keys are environment variable names. </td></tr>
     <tr><td class="paramname">printOutput</td><td>bool: If True, prints the stdout of the command to the screen. </td></tr>
@@ -275,7 +275,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html">CMDProcOutput</a>: An instance through which stdout, stderr, and return code of the process can be accessed. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CMDProcOutput: An instance through which stdout, stderr, and return code of the process can be accessed. </dd></dl>
 
 <p>Definition at line <a class="el" href="___o_s_8py_source.html#l00050">50</a> of file <a class="el" href="___o_s_8py_source.html">_OS.py</a>.</p>
 <div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#ae96f5e37a5bec97f506bd24cf5b34e46">   50</a></span>&#160;</div>
@@ -330,7 +330,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_o_s.html">OS</a></li><li class="navelem"><a class="el" href="namespace_o_s_1_1___o_s.html">_OS</a></li><li class="navelem"><a class="el" href="class_o_s_1_1___o_s_1_1___o_s.html">_OS</a></li>
-    <li class="footer">Generated on Mon Feb 4 2013 16:48:36 for py.OS by
+    <li class="footer">Generated on Mon Feb 4 2013 17:13:42 for py.OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

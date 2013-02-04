@@ -118,7 +118,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:afd48000a872456abab54c93f089c48b4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceconfig__parser__m2.html#afd48000a872456abab54c93f089c48b4">changeConfig</a></td></tr>
-<tr class="memdesc:afd48000a872456abab54c93f089c48b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes a config file line in the format '#OptionName foo' (format can be changed with parameters) under specified section.  <a href="#afd48000a872456abab54c93f089c48b4"></a><br/></td></tr>
+<tr class="memdesc:afd48000a872456abab54c93f089c48b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes a config file line in the format 'OptionName foo' (format can be changed with parameters) under specified section.  <a href="#afd48000a872456abab54c93f089c48b4"></a><br/></td></tr>
 <tr class="separator:afd48000a872456abab54c93f089c48b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -170,13 +170,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Changes a config file line in the format '#OptionName foo' (format can be changed with parameters) under specified section. </p>
+<p>Changes a config file line in the format 'OptionName foo' (format can be changed with parameters) under specified section. </p>
 <p>newData: New config file string to write to file, between sectionStart and sectionEnd. It can end or begin with a new line to write an entire line to file. sectionStart: ex. "\n[logging]" A new line may be present at the beginning of the string only sectionEnd: ex. "\n[" (end of section may also be indicated by reaching end of file) A new line may be present at the beginning of the string only</p>
 <p>Returns a list of all the following that apply: 0 If setting name was encountered in the file and it was uncommented 1 If setting name was encountered in the file and it was commented out 2 If setting name and value were added by this function 3 If setting value was changed by this function </p>
 
 <p>Definition at line <a class="el" href="config__parser__m2_8py_source.html#l00055">55</a> of file <a class="el" href="config__parser__m2_8py_source.html">config_parser_m2.py</a>.</p>
 <div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="namespaceconfig__parser__m2.html#afd48000a872456abab54c93f089c48b4">   55</a></span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">def </span><a class="code" href="namespaceconfig__parser__m2.html#afd48000a872456abab54c93f089c48b4" title="Changes a config file line in the format &#39;#OptionName foo&#39; (format can be changed with parameters) un...">changeConfig</a>(_file, newData, commentChar=&#39;#&#39;, assignChar=&#39; &#39;, sectionStart=None, sectionEnd=None):</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">def </span><a class="code" href="namespaceconfig__parser__m2.html#afd48000a872456abab54c93f089c48b4" title="Changes a config file line in the format &#39;OptionName foo&#39; (format can be changed with parameters) und...">changeConfig</a>(_file, newData, commentChar=&#39;#&#39;, assignChar=&#39; &#39;, sectionStart=None, sectionEnd=None):</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    newData = <a class="code" href="classconfig__parser__m2_1_1_config_line.html">ConfigLine</a>(newData, commentChar, assignChar)</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    sectionStartRe = re.compile(re.escape(sectionStart))</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    sectionEndRe = re.compile(re.escape(sectionEnd))</div>
@@ -247,7 +247,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceconfig__parser__m2.html">config_parser_m2</a></li>
-    <li class="footer">Generated on Mon Feb 4 2013 16:48:36 for py.OS by
+    <li class="footer">Generated on Mon Feb 4 2013 17:13:42 for py.OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

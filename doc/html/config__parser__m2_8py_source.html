@@ -157,7 +157,7 @@ $(document).ready(function(){initNavTree('config__parser__m2_8py_source.html',''
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">#             1    If setting name was encountered in the file and it was commented out</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">#             2    If setting name and value were added by this function</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">#             3    If setting value was changed by this function </span></div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="namespaceconfig__parser__m2.html#afd48000a872456abab54c93f089c48b4">   55</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceconfig__parser__m2.html#afd48000a872456abab54c93f089c48b4" title="Changes a config file line in the format &#39;#OptionName foo&#39; (format can be changed with parameters) un...">changeConfig</a>(_file, newData, commentChar=&#39;#&#39;, assignChar=&#39; &#39;, sectionStart=None, sectionEnd=None):</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="namespaceconfig__parser__m2.html#afd48000a872456abab54c93f089c48b4">   55</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceconfig__parser__m2.html#afd48000a872456abab54c93f089c48b4" title="Changes a config file line in the format &#39;OptionName foo&#39; (format can be changed with parameters) und...">changeConfig</a>(_file, newData, commentChar=&#39;#&#39;, assignChar=&#39; &#39;, sectionStart=None, sectionEnd=None):</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    newData = <a class="code" href="classconfig__parser__m2_1_1_config_line.html">ConfigLine</a>(newData, commentChar, assignChar)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    sectionStartRe = re.compile(re.escape(sectionStart))</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    sectionEndRe = re.compile(re.escape(sectionEnd))</div>
@@ -226,7 +226,7 @@ $(document).ready(function(){initNavTree('config__parser__m2_8py_source.html',''
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_54f5ad4811a0c3ecf9d1d7b037b5d3a4.html">OS</a></li><li class="navelem"><a class="el" href="dir_41423c6d7ab9effad340b91e3aaae40d.html">incomplete</a></li><li class="navelem"><a class="el" href="config__parser__m2_8py.html">config_parser_m2.py</a></li>
-    <li class="footer">Generated on Mon Feb 4 2013 16:48:36 for py.OS by
+    <li class="footer">Generated on Mon Feb 4 2013 17:13:42 for py.OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

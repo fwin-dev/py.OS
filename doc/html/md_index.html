@@ -98,15 +98,15 @@ $(document).ready(function(){initNavTree('md_index.html','');});
 <div class="title">Package description </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="namespace_o_s.html">OS</a> module provides common operating system functions that are platform independent.</p>
+<div class="textblock"><p>The OS module provides common operating system functions that are platform independent.</p>
 <p>Note that for most of the functions/methods on this page, arguments are not listed. You should look at the source code to determine the arguments needed.</p>
 <h1>Summary of functionality</h1>
 <ul>
-<li>Finding a suitable version of python installed in the <a class="el" href="namespace_o_s.html">OS</a> for compatibility reasons</li>
+<li>Finding a suitable version of python installed in the OS for compatibility reasons</li>
 <li>Retrieving general operating system information</li>
 <li>Interacting with operating system services - start, stop, restart, set boot state, etc.</li>
-<li>Interacting with the <a class="el" href="namespace_o_s.html">OS</a> package manager (apt, yum, macports) - installing, removing, upgrading, etc.</li>
-<li>Miscellaneous APIs and scripts that do not yet have a home may also be included in this python <a class="el" href="namespace_o_s.html">OS</a> package for various reasons. Currently, this includes:<ul>
+<li>Interacting with the OS package manager (apt, yum, macports) - installing, removing, upgrading, etc.</li>
+<li>Miscellaneous APIs and scripts that do not yet have a home may also be included in this python OS package for various reasons. Currently, this includes:<ul>
 <li>Removal of legacy LinuxCommon package, which used to be a master package containing py.OS, py.Net, py.Lang, and py.Disk</li>
 <li>GPG encryption/decryption library, which is not yet fully featured and is small enough to be included in the py.OS package</li>
 </ul>
@@ -115,23 +115,24 @@ $(document).ready(function(){initNavTree('md_index.html','');});
 <h1>Detailed functionality</h1>
 <h2>Python version information</h2>
 <p>The following is accessible by using the PyVersion module: </p>
-<pre class="fragment">import PyVersion
-</pre><h3>Determining the executable path or name of the currently running python interpreter</h3>
-<p>PyVersion.PY_EXE </p>
-<h3>Finding a suitable installed version of python to run your code</h3>
-<p><a class="el" href="namespace_o_s_1_1_py_version.html#ab8551391d708cab82df26a9b9e422baa" title="Returns the executable name or path of the wanted python version which can be executed from the termi...">PyVersion.checkSuitablePyExe()</a> <hr/>
-<h2>Retrieving information about the <a class="el" href="namespace_o_s.html">OS</a> and performing common OS-related functions</h2>
-<p>The following is accessible by using the <a class="el" href="namespace_o_s.html">OS</a> module: </p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> PyVersion</div>
+</div><!-- fragment --> <h3>Determining the executable path or name of the currently running python interpreter</h3>
+<pre class="fragment">PyVersion.PY_EXE
+</pre><h3>Finding a suitable installed version of python to run your code</h3>
+<pre class="fragment">PyVersion.checkSuitablePyExe()
+</pre><hr/>
+<h2>Retrieving information about the OS and performing common OS-related functions</h2>
+<p>The following is accessible by using the OS module: </p>
 <pre class="fragment">import OS
-</pre><h3>Determining what <a class="el" href="namespace_o_s.html">OS</a> is running</h3>
-<p><a class="el" href="namespace_o_s_1_1_describe_o_s.html#a497d597d347e00428cd72e652b911b79">OS.flavor</a></p>
-<h3>Determining the <a class="el" href="namespace_o_s.html">OS</a> version</h3>
-<p><a class="el" href="namespace_o_s_1_1_describe_o_s.html#a3f421a92e81608c6629b1bff83a9bf46">OS.version</a></p>
-<h3>Determining if an <a class="el" href="namespace_o_s.html">OS</a> is unix/unix-like (Linux, Darwin, etc.)</h3>
-<p><a class="el" href="namespace_o_s_1_1_describe_o_s.html#a06251380dc8a9d7f48a3c7d840f02c59">OS.isUnix()</a></p>
-<h3>Determine if your python script has root permissions (ran as root or using sudo)</h3>
-<p><a class="el" href="class_o_s_1_1___o_s_1_1___o_s.html#a418b4ee48548d1af4a20a6d7922dc42b">OS.hasRootPermissions()</a></p>
-<h3>Run a command in the terminal</h3>
+</pre><h3>Determining what OS is running</h3>
+<pre class="fragment">OS.flavor
+</pre><h3>Determining the OS version</h3>
+<pre class="fragment">OS.version
+</pre><h3>Determining if an OS is unix/unix-like (Linux, Darwin, etc.)</h3>
+<pre class="fragment">OS.isUnix()
+</pre><h3>Determine if your python script has root permissions (ran as root or using sudo)</h3>
+<pre class="fragment">OS.hasRootPermissions()
+</pre><h3>Run a command in the terminal</h3>
 <p>There are lots of arguments here. Refer to the code! </p>
 <pre class="fragment">OS.runCMD()
 </pre><hr/>
@@ -146,10 +147,10 @@ $(document).ready(function(){initNavTree('md_index.html','');});
 <h2>System software packages</h2>
 <p>The following is accessible by using the packages module: </p>
 <pre class="fragment">import OS.pkg
-</pre><p><a class="el" href="namespace_o_s_1_1pkg.html">OS.pkg</a> is more complex than some modules. Most of this is due to differences between the underlying package managers supported by <a class="el" href="namespace_o_s_1_1pkg.html">OS.pkg</a>, including:</p>
+</pre><p>OS.pkg is more complex than some modules. Most of this is due to differences between the underlying package managers supported by OS.pkg, including:</p>
 <ul>
 <li><code>yum</code> for CentOS and Red Hat is supported natively through python, since yum itself is written in python</li>
-<li><code>apt</code> for Debian, Ubuntu, etc. is supported by using the <code>python-apt</code> module which will be installed along with the <code>py.OS</code> package if your <a class="el" href="namespace_o_s.html">OS</a> is apt-based</li>
+<li><code>apt</code> for Debian, Ubuntu, etc. is supported by using the <code>python-apt</code> module which will be installed along with the <code>py.OS</code> package if your OS is apt-based</li>
 <li><code>macports</code> for Mac OSX is supported (sadly) only by parsing command line output using the <code>port</code> command</li>
 </ul>
 <p>The good news is that one similar API can be used to work with packages for all 3 package managers across different platforms.</p>
@@ -160,36 +161,37 @@ elif OS.pkg.isAptOS():
     OS.pkg.install("apt-get package name here")
 elif OS.pkg.isPortOS():
     OS.pkg.install("macports package name here")
-</pre><p>Also, when using install, update, isAvailable, and similar functions, there is no need to manually update the list of available packages from the internet. This is done automatically when <a class="el" href="namespace_o_s_1_1pkg.html">OS.pkg</a> is imported.</p>
-<h3>Checking if the pkg module supports your <a class="el" href="namespace_o_s.html">OS</a></h3>
-<p><a class="el" href="namespace_o_s_1_1pkg.html#adf35db3d71468e6a873270ad61d9ce59">OS.pkg.isSupported()</a></p>
-<h3>Checking if a package is installed</h3>
-<p>OS.pkg.isInstalled()</p>
-<h3>Checking if a package is available for install</h3>
-<p>OS.pkg.isAvailable()</p>
-<h3>Installing a package</h3>
+</pre><p>Also, when using install, update, isAvailable, and similar functions, there is no need to manually update the list of available packages from the internet. This is done automatically when OS.pkg is imported.</p>
+<h3>Checking if the pkg module supports your OS</h3>
+<pre class="fragment">OS.pkg.isSupported()
+</pre><h3>Checking if a package is installed</h3>
+<pre class="fragment">OS.pkg.isInstalled()
+</pre><h3>Checking if a package is available for install</h3>
+<pre class="fragment">OS.pkg.isAvailable()
+</pre><h3>Installing a package</h3>
 <p>See above. You can also install an iterable of packages like: </p>
 <pre class="fragment">OS.pkg.install(("nano", "vim", "emacs"))
 </pre><h3>Upgrading/updating existing packages</h3>
-<p>OS.pkg.update()</p>
-<h3>Removing/uninstalling a package</h3>
-<p><a class="el" href="namespace_o_s_1_1_linux_common.html#a57bbb57f61d4c71bc90328ea9d4c412f">OS.pkg.remove()</a></p>
-<ul>
+<pre class="fragment">OS.pkg.update()
+</pre><h3>Removing/uninstalling a package</h3>
+<pre class="fragment">OS.pkg.remove()
+</pre><ul>
 <li>On apt, an additional argument <code>purgeConfigFiles</code> can be specified which, when <code>True</code>, is identical to <code>apt-get purge</code></li>
 </ul>
 <h3>Platform-specific functions</h3>
 <h4>Updating the kernel on apt</h4>
-<p>OS.pkg.updateKernel()</p>
-<h4>Installing a 3rd party repository on yum</h4>
-<p>OS.pkg.installRepo_RPM() OS.pkg.installRepo_allKeys()</p>
-<h5>Installing EPEL on yum</h5>
+<pre class="fragment">OS.pkg.updateKernel()
+</pre><h4>Installing a 3rd party repository on yum</h4>
+<pre class="fragment">OS.pkg.installRepo_RPM()
+OS.pkg.installRepo_allKeys()
+</pre><h5>Installing EPEL on yum</h5>
 <p>This is a convenience method for installing EPEL. The latest EPEL RPM will be fetched. </p>
 <pre class="fragment">OS.pkg.installRepo_EPEL()
 </pre><hr/>
 <h2>GPG</h2>
 <p>The following is accessible by using the GPG module: </p>
 <pre class="fragment">from OS import GPG
-</pre><p>These features are self-explanatory with a quick glance at the code in <a class="el" href="namespace_o_s_1_1_g_p_g.html">OS.GPG</a></p>
+</pre><p>These features are self-explanatory with a quick glance at the code in OS.GPG</p>
 <h3>Import a key to the local keyring</h3>
 <h3>Get a key's ID</h3>
 <h3>Check if a key is imported</h3>
@@ -200,7 +202,7 @@ elif OS.pkg.isPortOS():
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 4 2013 16:48:36 for py.OS by
+    <li class="footer">Generated on Mon Feb 4 2013 17:13:42 for py.OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>
