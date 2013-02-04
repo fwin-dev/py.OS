@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "py.OS", "index.html", [
-    [ "Package description", "md_index.html", null ],
+    [ "Package description", "index.html", null ],
     [ "Packages", null, [
       [ "Packages", "namespaces.html", "namespaces" ],
       [ "Package Functions", "namespacemembers.html", [

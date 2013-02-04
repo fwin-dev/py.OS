@@ -1,6 +1,5 @@
-{#index}
-
-# Package description
+Package description	{#mainpage}
+===================
 
 The OS module provides common operating system functions that are platform independent.
 
