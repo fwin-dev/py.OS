@@ -23,13 +23,14 @@ if isAptOS():
 # red hat based OSs come with a python yum module already installed
 # macport CLI is used on OSX, so no modules for it
 
-
-# install from a private server using:
-# pip install py.OS --index-url http://your-pypi-server/simple
+# To include documentation in the build, create a MANIFEST.in file with these lines:
+# recursive-exclude doc *
+# recursive-include doc/html *
 
 # reference URLs:
 # http://docs.python.org/2/distutils/setupscript.html
 # http://packages.python.org/distribute/setuptools.html
+# http://docs.python.org/2/distutils/sourcedist.html
 setup(
     name = "py.OS",
     version = "0.5.0",
@@ -40,16 +41,10 @@ setup(
 	
 	package_dir = {"":"src"},
 	packages = find_packages("src"),
-	package_data = {
-#		"": [
-#			"doc"
-#		]
-	},
 #	namespace_packages = ["Common"],
 	install_requires = dependencies,
-#    include_package_data = True,
-	exclude_package_data = {"": ["*.pyc", ".DS_Store"]},
     zip_safe = False,
+#    dependency_links = ["http://projects.indigitaldev.net/master#egg=gearman-2.0.0beta"],
 	
 #	classifiers = [
 #		# http://pypi.python.org/pypi?%3Aaction=list_classifiers

@@ -3,5 +3,4 @@
 .pydevproject
 .DS_Store
 *.egg-info
-dist
 virt
