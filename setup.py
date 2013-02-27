@@ -17,9 +17,9 @@ def isAptOS():
 		flavor = "ubuntu"
 	return flavor in ["ubuntu", "debian", "linuxmint"]
 
-dependencies = []
+requirements = []
 if isAptOS():
-	dependencies.append("python-apt")
+	requirements.append("python-apt")
 # red hat based OSs come with a python yum module already installed
 # macport CLI is used on OSX, so no modules for it
 
@@ -32,28 +32,28 @@ if isAptOS():
 # http://packages.python.org/distribute/setuptools.html
 # http://docs.python.org/2/distutils/sourcedist.html
 setup(
-    name = "py.OS",
-    version = "0.5.0",
-    description = "Attempts to provide common operating system functions that are platform independent",
-    author = "Jesse Cowles",
-    author_email = "jcowles@indigital.net",
+	name = "py.OS",
+	version = "0.5.0",
+	description = "Attempts to provide common operating system functions that are platform independent",
+	author = "Jesse Cowles",
+	author_email = "jcowles@indigital.net",
 	url = "http://projects.indigitaldev.net/py.OS",
 	
 	package_dir = {"":"src"},
 	packages = find_packages("src"),
 #	namespace_packages = ["Common"],
-	install_requires = dependencies,
-    zip_safe = False,
-#    dependency_links = ["http://projects.indigitaldev.net/master#egg=gearman-2.0.0beta"],
+	install_requires = requirements,
+	zip_safe = False,
+#	dependency_links = ["http://projects.indigitaldev.net/master#egg=py.OS-0.5.0"],
 	
 #	classifiers = [
 #		# http://pypi.python.org/pypi?%3Aaction=list_classifiers
-#	    "Classifier: Development Status :: 4 - Beta",
-#	    "Classifier: Operating System :: POSIX :: Linux",
-#	    "Classifier: Operating System :: MacOS :: MacOS X",
-#	    "Classifier: Programming Language :: Python :: 2.6",
-#	    "Classifier: Programming Language :: Python :: 2.7",
-#	    "Classifier: Environment :: Console",
+#		"Classifier: Development Status :: 4 - Beta",
+#		"Classifier: Operating System :: POSIX :: Linux",
+#		"Classifier: Operating System :: MacOS :: MacOS X",
+#		"Classifier: Programming Language :: Python :: 2.6",
+#		"Classifier: Programming Language :: Python :: 2.7",
+#		"Classifier: Environment :: Console",
 #	],
 #	keywords = "networking",
 #	license = "",
