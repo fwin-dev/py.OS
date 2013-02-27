@@ -46,15 +46,15 @@ setup(
 	zip_safe = False,
 #	dependency_links = ["http://projects.indigitaldev.net/master#egg=py.OS-0.5.0"],
 	
-#	classifiers = [
-#		# http://pypi.python.org/pypi?%3Aaction=list_classifiers
-#		"Classifier: Development Status :: 4 - Beta",
-#		"Classifier: Operating System :: POSIX :: Linux",
-#		"Classifier: Operating System :: MacOS :: MacOS X",
-#		"Classifier: Programming Language :: Python :: 2.6",
-#		"Classifier: Programming Language :: Python :: 2.7",
-#		"Classifier: Environment :: Console",
-#	],
+	classifiers = [
+		# http://pypi.python.org/pypi?%3Aaction=list_classifiers
+		"Classifier: Development Status :: 4 - Beta",
+		"Classifier: Operating System :: POSIX :: Linux",
+		"Classifier: Operating System :: MacOS :: MacOS X",
+		"Classifier: Programming Language :: Python :: 2.6",
+		"Classifier: Programming Language :: Python :: 2.7",
+		"Classifier: Environment :: Console",
+	],
 #	keywords = "networking",
 #	license = "",
 )
