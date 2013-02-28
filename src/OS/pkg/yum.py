@@ -1,7 +1,8 @@
 from .. import _OS
+from Lang import DescribeOS
 
 def isYumOS():
-	return _OS.flavor in ["fedora", "redhat", "centos", "mandrake", "yellowdog"]
+	return DescribeOS.isRedHatBased()
 
 class _YumDummyCallback(object):
 	def event(self, state, data=None):

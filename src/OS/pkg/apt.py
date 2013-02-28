@@ -1,12 +1,13 @@
 from .. import _OS
-
-def isAptOS():
-	return _OS.flavor in ["ubuntu", "debian", "linuxmint"]
+from Lang import DescribeOS
 
 """
 This apt module supports the standard package methods in addition to an updateKernel(...) method
 which will perform a distupgrade.
 """
+
+def isAptOS():
+	return DescribeOS.isDebianBased()
 
 class AptInstaller:
 	def __init__(self):

@@ -1,7 +1,6 @@
-from DescribeOS import *
+from Lang.DescribeOS import *
 
 import shlex, subprocess, os, sys
-import random, string
 
 class CMDProcOutput:
 	def __init__(self, cmd, returnCode, stdout, stderr):

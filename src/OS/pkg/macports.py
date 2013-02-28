@@ -1,7 +1,8 @@
 from .. import _OS
+from Lang import DescribeOS
 
 def isMacPortOS():
-	return _OS.flavor == "darwin" and _OS.runCMD("port version", assertSuccess=False).returnCode == 0
+	return DescribeOS.flavor == "darwin" and _OS.runCMD("port version", assertSuccess=False).returnCode == 0
 
 class MacPortInstaller:
 	def __init__(self):
