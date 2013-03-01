@@ -32,7 +32,7 @@ class _OS:
 		return os.geteuid() == 0
 	
 	@classmethod
-	def runCMD(cls, command, params=None, assertSuccess=True, useBash=False, variables=None, printOutput=False, inputStr=None):
+	def runCMD(cls, command, params=None, assertSuccess=True, useBash=True, variables=None, printOutput=False, inputStr=None):
 		"""
 		Runs a command on the terminal.
 		
