@@ -4,4 +4,5 @@
 .DS_Store
 *.egg-info
 /dist
+*.egg
 virt

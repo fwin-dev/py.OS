@@ -1,6 +1,6 @@
-from macports import isMacPortOS, MacPortInstaller
-from apt import isAptOS, AptInstaller
-from yum import isYumOS, YumInstaller
+from _macports import isMacPortOS, MacPortInstaller
+from _apt import isAptOS, AptInstaller
+from _yum import isYumOS, YumInstaller
 
 import sys, inspect
 

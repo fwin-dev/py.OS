@@ -15,7 +15,7 @@ class _EPEL:
 		return findLatestFile(epelURL, "epel-release-")
 	
 	def isInstalled(self):
-		return not (_OS.flavor in ["centos", "rhel"] and not pkg.isInstalled("epel-release"))
+		return not (_OS.flavor in ["centos", "rhel"] and not _OS.pkg.isInstalled("epel-release"))
 	
 	def install(self):
 		if not self.hasEPEL():
@@ -31,8 +31,8 @@ class YumInstaller:
 	
 	def _init(self):
 		from yum import YumBase
-		yum = YumBase()
-		yum.setCacheDir()
+		yum_ = YumBase()
+		yum_.setCacheDir()
 		
 		# urlgrabber is a 3rd party module
 #		try:
@@ -48,7 +48,7 @@ class YumInstaller:
 #		except:
 #			print("Warning: Unable to set progress indicator")
 		
-		return yum
+		return yum_
 	
 	def installRepo_RPM(self, rpmURL, commonRepoName):
 		"""

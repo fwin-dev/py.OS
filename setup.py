@@ -6,7 +6,8 @@ if sys.version_info[0] >= 3 or sys.version_info <= (2,5):
 	raise Exception("This module only supports Python 2.6 or 2.7")
 
 requirements = []
-
+import setuptools
+setuptools.dist.Distribution(dict(setup_requires="py.Lang"))
 class InstallHook(_install):
 	def run(self):
 		self.preInstall()
@@ -20,6 +21,7 @@ class InstallHook(_install):
 			requirements.append("python-apt")
 		# red hat based OSs come with a python yum module already installed
 		# macport CLI is used on OSX, so no modules are needed for it
+	
 	def postInstall(self):
 		from Lang import DescribeOS
 		if DescribeOS.isRedHatBased():
@@ -40,7 +42,7 @@ class InstallHook(_install):
 setup(
 	cmdclass = {"install": InstallHook},
 	name = "py.OS",
-	version = "0.5.1-dev1",
+	version = "0.5.1-dev5",
 	description = "Attempts to provide common operating system functions that are platform independent",
 	author = "Jesse Cowles",
 	author_email = "jcowles@indigital.net",
@@ -49,9 +51,6 @@ setup(
 	package_dir = {"":"src"},
 	packages = find_packages("src"),
 	install_requires = requirements,
-	setup_requires = [
-		"py.Lang",
-	],
 	zip_safe = False,
 	
 	classifiers = [
