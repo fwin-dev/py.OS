@@ -5,7 +5,9 @@ import sys
 if sys.version_info[0] >= 3 or sys.version_info <= (2,5):
 	raise Exception("This module only supports Python 2.6 or 2.7")
 
-requirements = []
+requirements = [
+	"py.Lang",
+]
 import setuptools
 setuptools.dist.Distribution(dict(setup_requires="py.Lang"))
 class InstallHook(_install):
@@ -42,7 +44,7 @@ class InstallHook(_install):
 setup(
 	cmdclass = {"install": InstallHook},
 	name = "py.OS",
-	version = "0.5.1-dev5",
+	version = "0.5.1-dev7",
 	description = "Attempts to provide common operating system functions that are platform independent",
 	author = "Jesse Cowles",
 	author_email = "jcowles@indigital.net",
@@ -52,7 +54,6 @@ setup(
 	packages = find_packages("src"),
 	install_requires = requirements,
 	zip_safe = False,
-	
 	classifiers = [
 		# http://pypi.python.org/pypi?%3Aaction=list_classifiers
 		"Development Status :: 4 - Beta",
