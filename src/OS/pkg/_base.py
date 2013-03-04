@@ -66,7 +66,7 @@ class PackageManager(object):
 			errorMsg = "Could not " + actionName + " the following system packages because of lack of root permissions: \n" + \
 					   "\t" + " ".join(packages) + "\n" + \
 					   "If possible, re-run this script under root or sudo, or if not possible, " + actionName + \
-					   " these packages manually with " + self._terminalPkgManagerName
+					   " these packages manually with " + self._terminalPkgManagerName + " and then re-run this script."
 			raise Exception(errorMsg)
 	def _execAsRoot_pkgManagerCommand(self, actionName, method, args=tuple(), kwargs={}):
 		action = actionName + " with " + self._terminalPkgManagerName
@@ -76,7 +76,8 @@ class PackageManager(object):
 			return self._execAsRoot(method, args, kwargs)
 		except PrivilegeException as err:
 			errorMsg = "Could not perform:\n\t" + err.proc.cmd + "\n because of lack of root permissions.\n" + \
-					   "If possible, re-run this script under root or sudo, or if not possible, run the previous command manually."
+					   "If possible, re-run this script under root or sudo, or if not possible, run the previous " + \
+					   "command manually and then re-run this script."
 			raise Exception(errorMsg)
 	def _execAsRoot(self, method, args=tuple(), kwargs=dict()):
 		try:

@@ -54,7 +54,7 @@ class _OS:
 		if params != None:
 			if not hasattr(params, "__iter__"):
 				params = (params,)
-			params = [str(param).replace(" ", "\\ ") for param in params]
+			params = ['"' + str(param).replace('"', '\\"') + '"' for param in params]
 			command = command % tuple(params)
 		return command
 	

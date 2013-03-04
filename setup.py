@@ -7,6 +7,7 @@ if sys.version_info[0] >= 3 or sys.version_info <= (2,5):
 
 requirements = [
 	"py.Lang",
+	"py.Net",
 ]
 import setuptools
 setuptools.dist.Distribution(dict(setup_requires="py.Lang"))
@@ -44,7 +45,7 @@ class InstallHook(_install):
 setup(
 	cmdclass = {"install": InstallHook},
 	name = "py.OS",
-	version = "0.5.1-dev925",
+	version = "0.5.1-dev936",
 	description = "Attempts to provide common operating system functions that are platform independent",
 	author = "Jesse Cowles",
 	author_email = "jcowles@indigital.net",

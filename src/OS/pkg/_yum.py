@@ -12,14 +12,15 @@ class _EPEL:
 		epelURL = "http://dl.fedoraproject.org/pub/epel/" + _OS.version[0] + "/i386/"
 		return findLatestFile(epelURL, "epel-release-")
 	
-	def isInstalled(self):
-		return not (_OS.flavor in ["centos", "rhel"] and not _OS.pkg.isInstalled("epel-release"))
+	def isInstalled(self, pkg):
+		import OS.pkg
+		return not (_OS.flavor in ["centos", "rhel"] and not pkg.isInstalled("epel-release"))
 	
-	def install(self):
-		if not self.hasEPEL():
-			print("===Installing EPEL repository...\n")
-			_OS.pkg.installRepo_RPM(self._findBestEPEL(), "epel")
-			_OS.pkg.installRepo_allKeys()
+	def install(self, pkg):
+		if not self.isInstalled(pkg):
+			print("Installing EPEL repository...")
+			pkg.installRepo_RPM(self._findBestEPEL(), "epel")
+			pkg.installRepo_allKeys()
 
 class YumInstaller(PackageManager):
 	def __init__(self):
@@ -66,24 +67,23 @@ class YumInstaller(PackageManager):
 		"""
 		return self._execAsRoot_terminalCommand(self._installRepo_RPM, args=(rpmURL, commonRepoName))
 	def _installRepo_RPM(self, rpmURL, commonRepoName):
-		_OS.hasRootPermissions(asserTrue=True)
-		_OS.runCMD("rpm -Uvh %s", rpmURL)
+#		_OS.hasRootPermissions(assertTrue=True)
+		_OS.runCMD("rpm -Uh %s", rpmURL, useBash=False)
 		self._yum = self._init()	# needed to recognize new repo
 		repos = self._yum.repos.findRepos(commonRepoName)
 		assert len(repos) == 1 and len(repos[0].gpgkey) == 1
-		_OS.runCMD("rpm --import %s", repos[0].gpgkey[0])
+		_OS.runCMD("rpm --import %s", repos[0].gpgkey[0], useBash=True)
 		self._needsIndexUpdate = True
 	
 	def installRepo_allKeys(self):
 		"""Installs all keys for repo rpms already present on the system"""
-		_OS.hasRootPermissions(assertTrue=True)
-		
+#		_OS.hasRootPermissions(assertTrue=True)
 		for repoName in self._yum.repos.repos:
 			for key in self._yum.repos.repos[repoName].gpgkey:
 				_OS.runCMD("rpm --import %s", key)
 	
 	def installRepo_EPEL(self):
-		_EPEL().install()
+		_EPEL().install(self)
 	
 	def _install(self, packageNames):
 		if not _OS.hasRootPermissions():
