@@ -2,12 +2,28 @@ from Lang.DescribeOS import *
 
 import shlex, subprocess, os, sys
 
-class CMDProcOutput:
-	def __init__(self, cmd, returnCode, stdout, stderr):
+class CMD_Proc(object):
+	def __init__(self, cmd):
 		self.cmd = cmd
+
+class CMD_ProcOutput(CMD_Proc):
+	def __init__(self, cmd, returnCode, stdout, stderr):
+		super(CMD_ProcOutput, self).__init__(cmd)
 		self.returnCode = returnCode
 		self.stdout = stdout
 		self.stderr = stderr
+
+class CMD_ProcException(Exception, object):
+	def __init__(self, proc, message=None):
+		self.proc = proc
+		if message == None:
+			message = "Command: '" + self.proc.cmd + "' could not be executed"
+		super(CMD_ProcException, self).__init__(message)
+
+class CMD_ProcOutputException(CMD_ProcException):
+	def __init__(self, cmdProcOutput):
+		message = "Command: '" + cmdProcOutput.cmd + "' returned " + str(cmdProcOutput.returnCode)
+		super(CMD_ProcOutputException, self).__init__(cmdProcOutput, message=message)
 
 class _OS:
 	def __init__(self):
@@ -24,12 +40,23 @@ class _OS:
 		"""
 		
 		if assertTrue and os.geteuid() != 0:
-			raise Exception()
 			if not shouldExit:
 				raise Exception("You must run this script with sudo or as root")
 			else:
 				sys.exit("You must run this script with sudo or as root")
 		return os.geteuid() == 0
+	
+	@classmethod
+	def runCMD_getFullCMD(cls, command, params=None):
+		"""
+		@return str:	The terminal command with command line parameters, escaped if needed
+		"""
+		if params != None:
+			if not hasattr(params, "__iter__"):
+				params = (params,)
+			params = [str(param).replace(" ", "\\ ") for param in params]
+			command = command % tuple(params)
+		return command
 	
 	@classmethod
 	def runCMD(cls, command, params=None, assertSuccess=True, useBash=True, variables=None, printOutput=False, inputStr=None):
@@ -43,15 +70,9 @@ class _OS:
 		@param printOutput		bool:			If True, prints the stdout of the command to the screen.
 		@param inputStr			str:			A string to write to the process's stdin.
 		
-		@return CMDProcOutput: An instance through which stdout, stderr, and return code of the process can be accessed.
+		@return CMD_ProcOutput: An instance through which stdout, stderr, and return code of the process can be accessed.
 		"""
-		
-		if params != None:
-			if not hasattr(params, "__iter__"):
-				params = (params,)
-			params = [str(param).replace(" ", "\\ ") for param in params]
-			command = command % tuple(params)
-		
+		command = cls.runCMD_getFullCMD(command, params)
 		popenKwargs = {"stdout": subprocess.PIPE, "stderr": subprocess.PIPE}
 		if useBash or variables != None:
 			if variables != None:
@@ -75,12 +96,13 @@ class _OS:
 			stdout, stderr = proc.communicate(**comKwargs)
 			resultCode = proc.wait()
 		
+		cmdProcOutput = CMD_ProcOutput(command, resultCode, stdout, stderr)
 		if resultCode != 0 and assertSuccess:
 			print(stderr)
-			raise Exception("Command: '" + command + "' returned " + str(resultCode))
+			raise CMD_ProcOutputException(cmdProcOutput)
 		if printOutput:
 			print(stdout)
-		return CMDProcOutput(command, resultCode, stdout, stderr)
+		return cmdProcOutput
 
 
 import inspect
