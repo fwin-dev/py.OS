@@ -1,6 +1,9 @@
-from _macports import isMacPortOS, MacPortInstaller
-from _apt import isAptOS, AptInstaller
-from _yum import isYumOS, YumInstaller
+from _macports import MacPortInstaller
+isMacPortOS = MacPortInstaller.isSupported
+from _apt import AptInstaller
+isAptOS = AptInstaller.isSupported
+from _yum import YumInstaller
+isYumOS = YumInstaller.isSupported
 
 import sys, inspect
 

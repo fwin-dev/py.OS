@@ -1,3 +1,4 @@
+from _base import PackageManager, CMD_ProcException
 from .. import _OS
 from Lang import DescribeOS
 
@@ -6,74 +7,70 @@ This apt module supports the standard package methods in addition to an updateKe
 which will perform a distupgrade.
 """
 
-def isAptOS():
-	return DescribeOS.isDebianBased()
-
-class AptInstaller:
+class AptInstaller(PackageManager):
 	def __init__(self):
-		assert isAptOS()
-		self.needsRepoUpdate = True
-		
+		super(AptInstaller, self).__init__()
 		try:
-			import apt
 			self._apt = self._init()
 		except ImportError:
+			self._execAsRoot_withPkgs("install", ("python-apt",), self._installPyAptModule)
+			self._apt = self._init()
+			self._needsIndexUpdate = False
+	
+	def _installPyAptModule(self):
+		try:
 			_OS.runCMD("apt-get update")
 			_OS.runCMD("apt-get -y install python-apt")
-			import apt
-			self._apt = self._init()
-	
+		except Exception as err:
+			raise CMD_ProcException("apt-get install python-apt", err)
 	def _init(self):
 		import apt
 		return apt.cache.Cache()
-	
+	@classmethod
+	def isSupported(cls):
+		return DescribeOS.isDebianBased()
+	@property
+	def _terminalPkgManagerName(self):
+		return "apt-get"
 	def _updatePackageIndex(self):
-		assert _OS.hasRootPermissions(assertTrue=True)
-		if self.needsRepoUpdate:
+		try:
 			self._apt.update()
-			self.needsRepoUpdate = False
+		except Exception as err:
+			raise CMD_ProcException("apt-get update", err)
 	
-	def install(self, packageNames):
-		if isinstance(packageNames, str):
-			packageNames = [packageNames]
-		packageNames = filter(lambda x: not self.isInstalled(x), packageNames)
-		
-		if len(packageNames) > 0:
-			self._updatePackageIndex()
+	def _install(self, packageNames):
+		try:
 			for pkgName in packageNames:
 				self._apt[pkgName].mark_install()
-			self._apt.commit()
+				self._apt.commit()
+		except Exception as err:
+			raise CMD_ProcException("apt-get install " + " ".join(packageNames), err)
 	
-	def update(self, packageNames=None):
-		""" Updates/upgrades the specified list of packages, or all packages if packageNames == None """
+	def _update(self, packageNames=None):
 		if packageNames == None:
-			self._updatePackageIndex()
-			_OS.runCMD("sudo apt-get upgrade")
-		elif hasattr(packageNames, "__iter__"):
+			_OS.runCMD("apt-get upgrade")
+		else:
 			self.install(packageNames)
-	
 	def updateKernel(self):
-		_OS.runCMD("sudo apt-get dist-upgrade")
+		return self._execAsRoot_pkgManagerCommand("dist-upgrade", self._updateKernel)
+	def _updateKernel(self):
+		_OS.runCMD("apt-get dist-upgrade")
 	
-	def remove(self, packageNames, purgeConfigFiles=False):
+	def _remove(self, packageNames, purgeConfigFiles=False):
 		"""
-		Removes the specified package(s).
-		
-		purgeConfigFiles	--- When True, does the equivalent of an apt-get purge
+		@param purgeConfigFiles	bool:	When `True`, does the equivalent of an `apt-get purge`
 		"""
-		if isinstance(packageNames, str):
-			packageNames = [packageNames]
-		packageNames = filter(lambda x: self.isInstalled(x), packageNames)
-		
-		if len(packageNames) > 0:
-			_OS.hasRootPermissions(assertTrue=True, shouldExit=True)
+		try:
 			for pkgName in packageNames:
 				self._apt[pkgName].mark_delete(purge = purgeConfigFiles)
 			self._apt.commit()
+		except Exception as err:
+			raise CMD_ProcException("apt-get purge " + " ".join(packageNames), err)
 	
 	def isInstalled(self, packageName):
 		return self._apt[packageName].installed != None
 	
 	def isAvailable(self, packageName):
-		self._updatePackageIndex()
+		self.updatePackageIndex(exitOnNoRootPerm=False)		# if no root, use existing index without updating
 		return packageName in self._apt
+
