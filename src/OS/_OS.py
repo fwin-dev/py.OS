@@ -30,7 +30,7 @@ class _OS:
 		pass
 	
 	@classmethod
-	def hasRootPermissions(cls, assertTrue=False, shouldExit=True):
+	def hasRootPermissions(cls, assertTrue=False, shouldExit=False):
 		"""
 		Determines if your python script was invoked by a user with root permissions (run as root or using sudo).
 		
