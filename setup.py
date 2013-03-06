@@ -45,7 +45,7 @@ class InstallHook(_install):
 setup(
 	cmdclass = {"install": InstallHook},
 	name = "py.OS",
-	version = "0.5.1-dev936",
+	version = "0.5.1-dev937",
 	description = "Attempts to provide common operating system functions that are platform independent",
 	author = "Jesse Cowles",
 	author_email = "jcowles@indigital.net",

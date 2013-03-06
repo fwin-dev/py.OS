@@ -81,6 +81,8 @@ class _OS:
 				temp.update(variables)
 				variables = temp
 			popenKwargs.update({"shell":True, "executable":"/bin/bash", "env":variables})
+		else:	# when shell==False, Popen expects command/arguments to be in a list
+			command = shlex.split(command)
 		
 		comKwargs = {}
 		if inputStr != None:
@@ -88,7 +90,7 @@ class _OS:
 			comKwargs["input"] = inputStr
 		
 		try:
-			proc = subprocess.Popen(shlex.split(command), **popenKwargs)
+			proc = subprocess.Popen(command, **popenKwargs)
 		except OSError:
 			stdout = stderr = ""
 			resultCode = -1
