@@ -1,6 +1,6 @@
 from Lang.DescribeOS import *
 
-import shlex, subprocess, os, sys
+import pipes, shlex, subprocess, os, sys
 
 class CMD_Proc(object):
 	def __init__(self, cmd):
@@ -54,9 +54,21 @@ class _OS:
 		if params != None:
 			if not hasattr(params, "__iter__"):
 				params = (params,)
-			params = ['"' + str(param).replace('"', '\\"') + '"' for param in params]
+			for param in params:
+				assert isinstance(param, basestring)
+			params = [pipes.quote(param) for param in params]
 			command = command % tuple(params)
 		return command
+	
+#	@classmethod
+#	def _escape(cls):
+#		_find_unsafe = re.compile(r"[^a-zA-Z0-9]").search
+#		def _shlex_quote(str_):
+#			if _find_unsafe(str_) is None:
+#				return str_
+#			# use single quotes, and put single quotes into double quotes
+#			# the string $'b is then quoted as '$'"'"'b'
+#			return "'" + str_.replace("'", "'\"'\"'") + "'"
 	
 	@classmethod
 	def runCMD(cls, command, params=None, assertSuccess=True, useBash=True, variables=None, printOutput=False, inputStr=None):
