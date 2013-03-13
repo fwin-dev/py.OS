@@ -4,21 +4,44 @@ import os, os.path
 
 class GPG(object):
 	"""Quick GNUPG implementation with common functions, using the command line interface."""
-	def import_(self, keyFile):
+	def importPublicKey(self, keyFile):
 		keyFile = str(keyFile)
 		OS.runCMD("gpg --batch --import %s", keyFile)
-		id_ = self.getKeyID(keyFile)
-		# LIMITATION: if key is already signed, gnupg prints out key information to terminal even if stdout is connected to pipe
-		# OS.runCMD("gpg --lsign-key " + id_)
-		# LIMITATION: owner trust of key can't be set non-interactively for it due to limitations in the gnupg interface
 	
-	def isKeyImported(self, id):
+	def importPrivateKey(self, keyFile):
+		keyFile = str(keyFile)
+		OS.runCMD("gpg --batch --allow-secret-key-import --import %s", keyFile)
+	
+	def signKey(self, id_):
 		"""
-		Checks if a key is imported into the local keyring.
+		LIMITATION: If key is already signed, gnupg prints out key information to terminal even if stdout is connected to pipe
+		"""
+		OS.runCMD("gpg --batch --lsign-key %s", id_)
+	
+	def markKeyTrusted(self, id_):
+		"""
+		LIMITATION: Owner trust of key can't be set non-interactively for it due to limitations in the gnupg interface
+		"""
+		OS.runCMD("gpg --edit-key %s trust quit", id_)
+	
+	def importPublicKey_signTrust(self, keyFile):
+		"""
+		LIMITATION: This requires manual user input
+		"""
+		keyFile = str(keyFile)
+		self.importPublicKey(keyFile)
+		id_ = self.getKeyID(keyFile)
+		self.signKey(id_)
+		self.markKeyTrusted(id_)
+	
+	def isKeyImported(self, id_):
+		"""
+		Checks if a public or private key is imported into the local keyring.
 		
-		@param id	str:	An 8 or 16 character hex string
+		@param id_	str:	An 8 or 16 character hex string
 		"""
-		return id + ":" in OS.runCMD("gpg --list-secret-keys --with-colons").stdout
+		return id_ + ":" in OS.runCMD("gpg --list-secret-keys --with-colons").stdout or \
+			   id_ + ":" in OS.runCMD("gpg --list-public-keys --with-colons").stdout
 	
 	def getKeyID(self, filename):
 		"""
@@ -55,7 +78,7 @@ class GPG(object):
 		OS.runCMD("gpg --batch -r %s --output %s --encrypt %s", (keyID, outputFilePath, inputFilePath))
 		return outputFilePath
 	
-	def decrypt(self, inputFilePath, password):
+	def decrypt(self, inputFilePath, password=None):
 		"""
 		Decrypts a file.
 		
@@ -63,7 +86,7 @@ class GPG(object):
 		in order for decryption to work.
 		
 		@param inputFilePath	str:	File to decrypt. Must have .pgp extension. Will not be modified.
-		@param password			str:	Password of private key in keyring
+		@param password			str:	Password of private key in keyring, or None if no password.
 		@return					str:	Path of the decrypted file
 		"""
 		inputFilePath = str(inputFilePath)
@@ -71,7 +94,10 @@ class GPG(object):
 		outputFilePath = os.path.splitext(inputFilePath)[0]
 		if os.path.exists(outputFilePath):
 			os.remove(outputFilePath)
-		OS.runCMD("gpg --batch --passphrase %s --output %s --decrypt %s", (password, outputFilePath, inputFilePath))
+		if password != None:
+			OS.runCMD("gpg --batch --passphrase %s --output %s --decrypt %s", (password, outputFilePath, inputFilePath))
+		else:
+			OS.runCMD("gpg --batch --output %s --decrypt %s", (outputFilePath, inputFilePath))
 		return outputFilePath
 		
 
