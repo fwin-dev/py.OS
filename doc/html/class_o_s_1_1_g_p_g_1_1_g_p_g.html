@@ -114,16 +114,27 @@ $(document).ready(function(){initNavTree('class_o_s_1_1_g_p_g_1_1_g_p_g.html',''
 <div class="dynheader">
 Inheritance diagram for OS.GPG.GPG:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_o_s_1_1_g_p_g_1_1_g_p_g__inherit__graph.svg" width="134" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_o_s_1_1_g_p_g_1_1_g_p_g__inherit__graph.svg" width="200" height="331"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a93fad4754956cd80fe2d31a0e3c60a9c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a93fad4754956cd80fe2d31a0e3c60a9c">import_</a></td></tr>
-<tr class="separator:a93fad4754956cd80fe2d31a0e3c60a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a277f4ab5310eaac18c939d88b58a1c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a5a277f4ab5310eaac18c939d88b58a1c">importPublicKey</a></td></tr>
+<tr class="separator:a5a277f4ab5310eaac18c939d88b58a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a758fd932d86bbcc6bcc6e96cc89e1a5c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a758fd932d86bbcc6bcc6e96cc89e1a5c">importPrivateKey</a></td></tr>
+<tr class="separator:a758fd932d86bbcc6bcc6e96cc89e1a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e633b7b40398af8253875bc4f0c81e0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a0e633b7b40398af8253875bc4f0c81e0">signKey</a></td></tr>
+<tr class="memdesc:a0e633b7b40398af8253875bc4f0c81e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">LIMITATION: If key is already signed, gnupg prints out key information to terminal even if stdout is connected to pipe.  <a href="#a0e633b7b40398af8253875bc4f0c81e0"></a><br/></td></tr>
+<tr class="separator:a0e633b7b40398af8253875bc4f0c81e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fe9d92003c881c3936b26934d2862fd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a8fe9d92003c881c3936b26934d2862fd">markKeyTrusted</a></td></tr>
+<tr class="memdesc:a8fe9d92003c881c3936b26934d2862fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">LIMITATION: Owner trust of key can't be set non-interactively for it due to limitations in the gnupg interface.  <a href="#a8fe9d92003c881c3936b26934d2862fd"></a><br/></td></tr>
+<tr class="separator:a8fe9d92003c881c3936b26934d2862fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5c06147933c820d46880733926641c7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#aa5c06147933c820d46880733926641c7">importPublicKey_signTrust</a></td></tr>
+<tr class="memdesc:aa5c06147933c820d46880733926641c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">LIMITATION: This requires manual user input.  <a href="#aa5c06147933c820d46880733926641c7"></a><br/></td></tr>
+<tr class="separator:aa5c06147933c820d46880733926641c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6a6001be66993b5ffb8ed82b7f6832f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#aa6a6001be66993b5ffb8ed82b7f6832f">isKeyImported</a></td></tr>
-<tr class="memdesc:aa6a6001be66993b5ffb8ed82b7f6832f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a key is imported into the local keyring.  <a href="#aa6a6001be66993b5ffb8ed82b7f6832f"></a><br/></td></tr>
+<tr class="memdesc:aa6a6001be66993b5ffb8ed82b7f6832f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a public or private key is imported into the local keyring.  <a href="#aa6a6001be66993b5ffb8ed82b7f6832f"></a><br/></td></tr>
 <tr class="separator:aa6a6001be66993b5ffb8ed82b7f6832f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84cc5f9f7bfdcdea2089b8cd5f368c3d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a84cc5f9f7bfdcdea2089b8cd5f368c3d">getKeyID</a></td></tr>
 <tr class="memdesc:a84cc5f9f7bfdcdea2089b8cd5f368c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets first key ID of the key in filename.  <a href="#a84cc5f9f7bfdcdea2089b8cd5f368c3d"></a><br/></td></tr>
@@ -160,7 +171,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>password</em>&#160;</td>
+          <td class="paramname"><em>password</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -175,23 +186,26 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">inputFilePath</td><td>str: File to decrypt. Must have .pgp extension. Will not be modified. </td></tr>
-    <tr><td class="paramname">password</td><td>str: Password of private key in keyring </td></tr>
+    <tr><td class="paramname">password</td><td>str: Password of private key in keyring, or None if no password. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>str: Path of the decrypted file </dd></dl>
 
-<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00073">73</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a242e7f3e932c17eb32d329d9e33d3562">   73</a></span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a242e7f3e932c17eb32d329d9e33d3562" title="Decrypts a file.">decrypt</a>(self, inputFilePath, password):</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        inputFilePath = str(inputFilePath)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">assert</span> inputFilePath.endswith(<span class="stringliteral">&quot;.pgp&quot;</span>)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        outputFilePath = os.path.splitext(inputFilePath)[0]</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> os.path.exists(outputFilePath):</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            os.remove(outputFilePath)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        OS.runCMD(<span class="stringliteral">&quot;gpg --batch --passphrase %s --output %s --decrypt %s&quot;</span>, (password, outputFilePath, inputFilePath))</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> outputFilePath</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        </div>
+<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00099">99</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a242e7f3e932c17eb32d329d9e33d3562">   99</a></span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a242e7f3e932c17eb32d329d9e33d3562" title="Decrypts a file.">decrypt</a>(self, inputFilePath, password=None):</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        inputFilePath = str(inputFilePath)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">assert</span> inputFilePath.endswith(<span class="stringliteral">&quot;.pgp&quot;</span>)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        outputFilePath = os.path.splitext(inputFilePath)[0]</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span> os.path.exists(outputFilePath):</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            os.remove(outputFilePath)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">if</span> password != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            OS.runCMD(<span class="stringliteral">&quot;gpg --batch --passphrase %s --output %s --decrypt %s&quot;</span>, (password, outputFilePath, inputFilePath))</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            OS.runCMD(<span class="stringliteral">&quot;gpg --batch --output %s --decrypt %s&quot;</span>, (outputFilePath, inputFilePath))</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> outputFilePath</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        </div>
 </div>
 </div><!-- fragment -->
 </div>
@@ -237,15 +251,15 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>str: Path of the encrypted file </dd></dl>
 
-<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00054">54</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#af7ea847bdbfc0a0b34be3d33001cd7d7">   54</a></span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#af7ea847bdbfc0a0b34be3d33001cd7d7" title="Encrypts a file.">encrypt</a>(self, inputFilePath, keyID):</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        inputFilePath = str(inputFilePath)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        outputFilePath = inputFilePath + <span class="stringliteral">&quot;.pgp&quot;</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> os.path.exists(outputFilePath):</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            os.remove(outputFilePath)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        OS.runCMD(<span class="stringliteral">&quot;gpg --batch -r %s --output %s --encrypt %s&quot;</span>, (keyID, outputFilePath, inputFilePath))</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> outputFilePath</div>
+<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00080">80</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#af7ea847bdbfc0a0b34be3d33001cd7d7">   80</a></span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#af7ea847bdbfc0a0b34be3d33001cd7d7" title="Encrypts a file.">encrypt</a>(self, inputFilePath, keyID):</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        inputFilePath = str(inputFilePath)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        outputFilePath = inputFilePath + <span class="stringliteral">&quot;.pgp&quot;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">if</span> os.path.exists(outputFilePath):</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            os.remove(outputFilePath)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        OS.runCMD(<span class="stringliteral">&quot;gpg --batch -r %s --output %s --encrypt %s&quot;</span>, (keyID, outputFilePath, inputFilePath))</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> outputFilePath</div>
    </div>
 </div><!-- fragment -->
 </div>
@@ -277,37 +291,70 @@ Public Member Functions</h2></td></tr>
 <p>Gets first key ID of the key in filename. </p>
 <dl class="section return"><dt>Returns</dt><dd>str: 8 character hex string </dd></dl>
 
-<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00031">31</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a84cc5f9f7bfdcdea2089b8cd5f368c3d">   31</a></span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a84cc5f9f7bfdcdea2089b8cd5f368c3d" title="Gets first key ID of the key in filename.">getKeyID</a>(self, filename):</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        filename = str(filename)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        id_ = <span class="keywordtype">None</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">for</span> line <span class="keywordflow">in</span> OS.runCMD(<span class="stringliteral">&quot;gpg --with-colons %s&quot;</span>, filename).stdout.split(<span class="stringliteral">&quot;\n&quot;</span>):</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            line = line.split(<span class="stringliteral">&quot;:&quot;</span>)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">if</span> line[0] == <span class="stringliteral">&quot;pub&quot;</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">if</span> id_ != <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    <span class="keywordflow">raise</span> <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;More than 1 key found in &quot;</span> + filename)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                id_ = line[4][8:]</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> id_</div>
+<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00057">57</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a84cc5f9f7bfdcdea2089b8cd5f368c3d">   57</a></span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a84cc5f9f7bfdcdea2089b8cd5f368c3d" title="Gets first key ID of the key in filename.">getKeyID</a>(self, filename):</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        filename = str(filename)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        id_ = <span class="keywordtype">None</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> line <span class="keywordflow">in</span> OS.runCMD(<span class="stringliteral">&quot;gpg --with-colons %s&quot;</span>, filename).stdout.split(<span class="stringliteral">&quot;\n&quot;</span>):</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            line = line.split(<span class="stringliteral">&quot;:&quot;</span>)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">if</span> line[0] == <span class="stringliteral">&quot;pub&quot;</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">if</span> id_ != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <span class="keywordflow">raise</span> <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;More than 1 key found in &quot;</span> + filename)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                id_ = line[4][8:]</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> id_</div>
   </div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_o_s_1_1_g_p_g_1_1_g_p_g_a84cc5f9f7bfdcdea2089b8cd5f368c3d_icgraph.svg" width="382" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_o_s_1_1_g_p_g_1_1_g_p_g_a84cc5f9f7bfdcdea2089b8cd5f368c3d_icgraph.svg" width="430" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a93fad4754956cd80fe2d31a0e3c60a9c"></a>
+<a class="anchor" id="a758fd932d86bbcc6bcc6e96cc89e1a5c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def OS.GPG.GPG.import_ </td>
+          <td class="memname">def OS.GPG.GPG.importPrivateKey </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>keyFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00012">12</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a758fd932d86bbcc6bcc6e96cc89e1a5c">   12</a></span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a758fd932d86bbcc6bcc6e96cc89e1a5c">importPrivateKey</a>(self, keyFile):</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        keyFile = str(keyFile)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        OS.runCMD(<span class="stringliteral">&quot;gpg --batch --allow-secret-key-import --import %s&quot;</span>, keyFile)</div>
+ </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a5a277f4ab5310eaac18c939d88b58a1c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def OS.GPG.GPG.importPublicKey </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -327,20 +374,62 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00008">8</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a93fad4754956cd80fe2d31a0e3c60a9c">    8</a></span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a93fad4754956cd80fe2d31a0e3c60a9c">import_</a>(self, keyFile):</div>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a5a277f4ab5310eaac18c939d88b58a1c">    8</a></span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a5a277f4ab5310eaac18c939d88b58a1c">importPublicKey</a>(self, keyFile):</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        keyFile = str(keyFile)</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        OS.runCMD(<span class="stringliteral">&quot;gpg --batch --import %s&quot;</span>, keyFile)</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        id_ = self.<a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a84cc5f9f7bfdcdea2089b8cd5f368c3d" title="Gets first key ID of the key in filename.">getKeyID</a>(keyFile)</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="comment"># LIMITATION: if key is already signed, gnupg prints out key information to terminal even if stdout is connected to pipe</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="comment"># OS.runCMD(&quot;gpg --lsign-key &quot; + id_)</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment"># LIMITATION: owner trust of key can&#39;t be set non-interactively for it due to limitations in the gnupg interface</span></div>
+   </div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_o_s_1_1_g_p_g_1_1_g_p_g_a5a277f4ab5310eaac18c939d88b58a1c_icgraph.svg" width="464" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa5c06147933c820d46880733926641c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def OS.GPG.GPG.importPublicKey_signTrust </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>keyFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LIMITATION: This requires manual user input. </p>
+
+<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00034">34</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#aa5c06147933c820d46880733926641c7">   34</a></span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#aa5c06147933c820d46880733926641c7" title="LIMITATION: This requires manual user input.">importPublicKey_signTrust</a>(self, keyFile):</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        keyFile = str(keyFile)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        self.<a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a5a277f4ab5310eaac18c939d88b58a1c">importPublicKey</a>(keyFile)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        id_ = self.<a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a84cc5f9f7bfdcdea2089b8cd5f368c3d" title="Gets first key ID of the key in filename.">getKeyID</a>(keyFile)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        self.<a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a0e633b7b40398af8253875bc4f0c81e0" title="LIMITATION: If key is already signed, gnupg prints out key information to terminal even if stdout is ...">signKey</a>(id_)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        self.<a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a8fe9d92003c881c3936b26934d2862fd" title="LIMITATION: Owner trust of key can&#39;t be set non-interactively for it due to limitations in the gnupg ...">markKeyTrusted</a>(id_)</div>
     </div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_o_s_1_1_g_p_g_1_1_g_p_g_a93fad4754956cd80fe2d31a0e3c60a9c_cgraph.svg" width="382" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_o_s_1_1_g_p_g_1_1_g_p_g_aa5c06147933c820d46880733926641c7_cgraph.svg" width="467" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -361,7 +450,7 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>id</em>&#160;</td>
+          <td class="paramname"><em>id_</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -371,20 +460,105 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Checks if a key is imported into the local keyring. </p>
+<p>Checks if a public or private key is imported into the local keyring. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>str: An 8 or 16 character hex string </td></tr>
+    <tr><td class="paramname">id_</td><td>str: An 8 or 16 character hex string </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00022">22</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#aa6a6001be66993b5ffb8ed82b7f6832f">   22</a></span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#aa6a6001be66993b5ffb8ed82b7f6832f" title="Checks if a key is imported into the local keyring.">isKeyImported</a>(self, id):</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> id + <span class="stringliteral">&quot;:&quot;</span> <span class="keywordflow">in</span> OS.runCMD(<span class="stringliteral">&quot;gpg --list-secret-keys --with-colons&quot;</span>).stdout</div>
- </div>
+<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00047">47</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#aa6a6001be66993b5ffb8ed82b7f6832f">   47</a></span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#aa6a6001be66993b5ffb8ed82b7f6832f" title="Checks if a public or private key is imported into the local keyring.">isKeyImported</a>(self, id_):</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> id_ + <span class="stringliteral">&quot;:&quot;</span> <span class="keywordflow">in</span> OS.runCMD(<span class="stringliteral">&quot;gpg --list-secret-keys --with-colons&quot;</span>).stdout <span class="keywordflow">or</span> \</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;               id_ + <span class="stringliteral">&quot;:&quot;</span> <span class="keywordflow">in</span> OS.runCMD(<span class="stringliteral">&quot;gpg --list-public-keys --with-colons&quot;</span>).stdout</div>
+    </div>
 </div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a8fe9d92003c881c3936b26934d2862fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def OS.GPG.GPG.markKeyTrusted </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>id_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LIMITATION: Owner trust of key can't be set non-interactively for it due to limitations in the gnupg interface. </p>
+
+<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00027">27</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a8fe9d92003c881c3936b26934d2862fd">   27</a></span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a8fe9d92003c881c3936b26934d2862fd" title="LIMITATION: Owner trust of key can&#39;t be set non-interactively for it due to limitations in the gnupg ...">markKeyTrusted</a>(self, id_):</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        OS.runCMD(<span class="stringliteral">&quot;gpg --edit-key %s trust quit&quot;</span>, id_)</div>
+  </div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_o_s_1_1_g_p_g_1_1_g_p_g_a8fe9d92003c881c3936b26934d2862fd_icgraph.svg" width="467" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e633b7b40398af8253875bc4f0c81e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def OS.GPG.GPG.signKey </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>id_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LIMITATION: If key is already signed, gnupg prints out key information to terminal even if stdout is connected to pipe. </p>
+
+<p>Definition at line <a class="el" href="_g_p_g_8py_source.html#l00020">20</a> of file <a class="el" href="_g_p_g_8py_source.html">GPG.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a0e633b7b40398af8253875bc4f0c81e0">   20</a></span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html#a0e633b7b40398af8253875bc4f0c81e0" title="LIMITATION: If key is already signed, gnupg prints out key information to terminal even if stdout is ...">signKey</a>(self, id_):</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        OS.runCMD(<span class="stringliteral">&quot;gpg --batch --lsign-key %s&quot;</span>, id_)</div>
+    </div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_o_s_1_1_g_p_g_1_1_g_p_g_a0e633b7b40398af8253875bc4f0c81e0_icgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -396,7 +570,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_o_s.html">OS</a></li><li class="navelem"><a class="el" href="namespace_o_s_1_1_g_p_g.html">GPG</a></li><li class="navelem"><a class="el" href="class_o_s_1_1_g_p_g_1_1_g_p_g.html">GPG</a></li>
-    <li class="footer">Generated on Mon Feb 4 2013 17:34:54 for py.OS by
+    <li class="footer">Generated on Thu Mar 28 2013 15:36:07 for py.OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

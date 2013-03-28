@@ -1,7 +1,0 @@
-<map id="OS.pkg.macports.MacPortInstaller.isInstalled" name="OS.pkg.macports.MacPortInstaller.isInstalled">
-<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1macports_1_1_mac_port_installer.html#ab8dc3770a65c14410bec157771875884" title="OS.pkg.macports.MacPortInstaller.install" alt="" coords="286,5,533,32"/>
-<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1macports_1_1_mac_port_installer.html#a1b9a809fded608fc9669c1c8ce76e6c0" title="OS.pkg.macports.MacPortInstaller.remove" alt="" coords="281,56,538,83"/>
-<area shape="rect" id="node7" href="$class_o_s_1_1pkg_1_1yum_1_1_yum_installer.html#aa33eadba0696d51bd35e3591635b67cf" title="OS.pkg.yum.YumInstaller.install" alt="" coords="310,107,509,133"/>
-<area shape="rect" id="node11" href="$class_o_s_1_1pkg_1_1yum_1_1_yum_installer.html#ac39974d4ee37fbc195eda54f2fccc438" title="OS.pkg.yum.YumInstaller.remove" alt="" coords="305,157,513,184"/>
-<area shape="rect" id="node9" href="$class_o_s_1_1pkg_1_1yum_1_1_yum_installer.html#aefad82c28852c4cec1fdb66892956dbd" title="OS.pkg.yum.YumInstaller.install\lRepo_EPEL" alt="" coords="587,99,786,141"/>
-</map>

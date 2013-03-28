@@ -116,13 +116,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a418b4ee48548d1af4a20a6d7922dc42b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_1_1___o_s_1_1___o_s.html#a418b4ee48548d1af4a20a6d7922dc42b">hasRootPermissions</a></td></tr>
 <tr class="memdesc:a418b4ee48548d1af4a20a6d7922dc42b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if your python script was invoked by a user with root permissions (run as root or using sudo).  <a href="#a418b4ee48548d1af4a20a6d7922dc42b"></a><br/></td></tr>
 <tr class="separator:a418b4ee48548d1af4a20a6d7922dc42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6071bac4997a41f753a9a190a59b124a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_1_1___o_s_1_1___o_s.html#a6071bac4997a41f753a9a190a59b124a">runCMD_getFullCMD</a></td></tr>
+<tr class="separator:a6071bac4997a41f753a9a190a59b124a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae96f5e37a5bec97f506bd24cf5b34e46"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_1_1___o_s_1_1___o_s.html#ae96f5e37a5bec97f506bd24cf5b34e46">runCMD</a></td></tr>
 <tr class="memdesc:ae96f5e37a5bec97f506bd24cf5b34e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs a command on the terminal.  <a href="#ae96f5e37a5bec97f506bd24cf5b34e46"></a><br/></td></tr>
 <tr class="separator:ae96f5e37a5bec97f506bd24cf5b34e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="___o_s_8py_source.html#l00013">13</a> of file <a class="el" href="___o_s_8py_source.html">_OS.py</a>.</p>
+<p>Definition at line <a class="el" href="___o_s_8py_source.html#l00028">28</a> of file <a class="el" href="___o_s_8py_source.html">_OS.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4fb297773e6a68d39fca731a36be283b"></a>
 <div class="memitem">
@@ -138,10 +140,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="___o_s_8py_source.html#l00014">14</a> of file <a class="el" href="___o_s_8py_source.html">_OS.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a4fb297773e6a68d39fca731a36be283b">   14</a></span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a4fb297773e6a68d39fca731a36be283b">__init__</a>(self):</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">pass</span></div>
+<p>Definition at line <a class="el" href="___o_s_8py_source.html#l00029">29</a> of file <a class="el" href="___o_s_8py_source.html">_OS.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a4fb297773e6a68d39fca731a36be283b">   29</a></span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a4fb297773e6a68d39fca731a36be283b">__init__</a>(self):</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">pass</span></div>
     </div>
 </div><!-- fragment -->
 </div>
@@ -167,7 +169,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>shouldExit</em> = <code>True</code>&#160;</td>
+          <td class="paramname"><em>shouldExit</em> = <code>False</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -187,17 +189,16 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool: True if script has root permissions, False otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="___o_s_8py_source.html#l00026">26</a> of file <a class="el" href="___o_s_8py_source.html">_OS.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a418b4ee48548d1af4a20a6d7922dc42b">   26</a></span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a418b4ee48548d1af4a20a6d7922dc42b" title="Determines if your python script was invoked by a user with root permissions (run as root or using su...">hasRootPermissions</a>(cls, assertTrue=False, shouldExit=True):</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> assertTrue <span class="keywordflow">and</span> os.geteuid() != 0:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">raise</span> <a class="code" href="class_exception.html">Exception</a>()</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> <span class="keywordflow">not</span> shouldExit:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">raise</span> <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;You must run this script with sudo or as root&quot;</span>)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                sys.exit(<span class="stringliteral">&quot;You must run this script with sudo or as root&quot;</span>)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> os.geteuid() == 0</div>
+<p>Definition at line <a class="el" href="___o_s_8py_source.html#l00041">41</a> of file <a class="el" href="___o_s_8py_source.html">_OS.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a418b4ee48548d1af4a20a6d7922dc42b">   41</a></span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a418b4ee48548d1af4a20a6d7922dc42b" title="Determines if your python script was invoked by a user with root permissions (run as root or using su...">hasRootPermissions</a>(cls, assertTrue=False, shouldExit=False):</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">if</span> assertTrue <span class="keywordflow">and</span> os.geteuid() != 0:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span> <span class="keywordflow">not</span> shouldExit:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">raise</span> <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;You must run this script with sudo or as root&quot;</span>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                sys.exit(<span class="stringliteral">&quot;You must run this script with sudo or as root&quot;</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> os.geteuid() == 0</div>
     </div>
 </div><!-- fragment -->
 </div>
@@ -234,7 +235,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>useBash</em> = <code>False</code>, </td>
+          <td class="paramname"><em>useBash</em> = <code>True</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -274,49 +275,102 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>CMDProcOutput: An instance through which stdout, stderr, and return code of the process can be accessed. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CMD_ProcOutput: An instance through which stdout, stderr, and return code of the process can be accessed. </dd></dl>
 
-<p>Definition at line <a class="el" href="___o_s_8py_source.html#l00050">50</a> of file <a class="el" href="___o_s_8py_source.html">_OS.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#ae96f5e37a5bec97f506bd24cf5b34e46">   50</a></span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#ae96f5e37a5bec97f506bd24cf5b34e46" title="Runs a command on the terminal.">runCMD</a>(cls, command, params=None, assertSuccess=True, useBash=False, variables=None, printOutput=False, inputStr=None):</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> params != <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> <span class="keywordflow">not</span> hasattr(params, <span class="stringliteral">&quot;__iter__&quot;</span>):</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                params = (params,)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            params = [str(param).replace(<span class="stringliteral">&quot; &quot;</span>, <span class="stringliteral">&quot;\\ &quot;</span>) <span class="keywordflow">for</span> param <span class="keywordflow">in</span> params]</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            command = command % tuple(params)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        popenKwargs = {<span class="stringliteral">&quot;stdout&quot;</span>: subprocess.PIPE, <span class="stringliteral">&quot;stderr&quot;</span>: subprocess.PIPE}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> useBash <span class="keywordflow">or</span> variables != <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span> variables != <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                useBash = <span class="keyword">True</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                temp = os.environ.copy()</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                temp.update(variables)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                variables = temp</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            popenKwargs.update({<span class="stringliteral">&quot;shell&quot;</span>:<span class="keyword">True</span>, <span class="stringliteral">&quot;executable&quot;</span>:<span class="stringliteral">&quot;/bin/bash&quot;</span>, <span class="stringliteral">&quot;env&quot;</span>:variables})</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        comKwargs = {}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> inputStr != <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            popenKwargs[<span class="stringliteral">&quot;stdin&quot;</span>] = subprocess.PIPE</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            comKwargs[<span class="stringliteral">&quot;input&quot;</span>] = inputStr</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">try</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            proc = subprocess.Popen(shlex.split(command), **popenKwargs)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">except</span> OSError:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            stdout = stderr = <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            resultCode = -1</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            stdout, stderr = proc.communicate(**comKwargs)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            resultCode = proc.wait()</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span> resultCode != 0 <span class="keywordflow">and</span> assertSuccess:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            print(stderr)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">raise</span> <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;Command: &#39;&quot;</span> + command + <span class="stringliteral">&quot;&#39; returned &quot;</span> + str(resultCode))</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span> printOutput:</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            print(stdout)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html">CMDProcOutput</a>(command, resultCode, stdout, stderr)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<p>Definition at line <a class="el" href="___o_s_8py_source.html#l00089">89</a> of file <a class="el" href="___o_s_8py_source.html">_OS.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#ae96f5e37a5bec97f506bd24cf5b34e46">   89</a></span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#ae96f5e37a5bec97f506bd24cf5b34e46" title="Runs a command on the terminal.">runCMD</a>(cls, command, params=None, assertSuccess=True, useBash=True, variables=None, printOutput=False, inputStr=None):</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        command = cls.runCMD_getFullCMD(command, params)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        popenKwargs = {<span class="stringliteral">&quot;stdout&quot;</span>: subprocess.PIPE, <span class="stringliteral">&quot;stderr&quot;</span>: subprocess.PIPE}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> useBash <span class="keywordflow">or</span> variables != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">if</span> variables != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                useBash = <span class="keyword">True</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                temp = os.environ.copy()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                temp.update(variables)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                variables = temp</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            popenKwargs.update({<span class="stringliteral">&quot;shell&quot;</span>:<span class="keyword">True</span>, <span class="stringliteral">&quot;executable&quot;</span>:<span class="stringliteral">&quot;/bin/bash&quot;</span>, <span class="stringliteral">&quot;env&quot;</span>:variables})</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">else</span>:   <span class="comment"># when shell==False, Popen expects command/arguments to be in a list</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            command = shlex.split(command)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        comKwargs = {}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span> inputStr != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            popenKwargs[<span class="stringliteral">&quot;stdin&quot;</span>] = subprocess.PIPE</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            comKwargs[<span class="stringliteral">&quot;input&quot;</span>] = inputStr</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">try</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            proc = subprocess.Popen(command, **popenKwargs)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">except</span> OSError:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            stdout = stderr = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            resultCode = -1</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            stdout, stderr = proc.communicate(**comKwargs)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            resultCode = proc.wait()</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        cmdProcOutput = <a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html">CMD_ProcOutput</a>(command, resultCode, stdout, stderr)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">if</span> resultCode != 0 <span class="keywordflow">and</span> assertSuccess:</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            print(stderr)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">raise</span> <a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output_exception.html">CMD_ProcOutputException</a>(cmdProcOutput)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span> printOutput:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            print(stdout)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> cmdProcOutput</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
 </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6071bac4997a41f753a9a190a59b124a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def OS._OS._OS.runCMD_getFullCMD </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>cls</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>params</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>str: The terminal command with command line parameters, escaped if needed </dd></dl>
+
+<p>Definition at line <a class="el" href="___o_s_8py_source.html#l00055">55</a> of file <a class="el" href="___o_s_8py_source.html">_OS.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a6071bac4997a41f753a9a190a59b124a">   55</a></span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a6071bac4997a41f753a9a190a59b124a">runCMD_getFullCMD</a>(cls, command, params=None):</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> params != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> <span class="keywordflow">not</span> hasattr(params, <span class="stringliteral">&quot;__iter__&quot;</span>):</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                params = (params,)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">for</span> param <span class="keywordflow">in</span> params:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keyword">assert</span> isinstance(param, basestring)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            params = [pipes.quote(param) <span class="keywordflow">for</span> param <span class="keywordflow">in</span> params]</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            command = command % tuple(params)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> command</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">#   @classmethod</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">#   def _escape(cls):</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">#       _find_unsafe = re.compile(r&quot;[^a-zA-Z0-9]&quot;).search</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">#       def _shlex_quote(str_):</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">#           if _find_unsafe(str_) is None:</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">#               return str_</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">#           # use single quotes, and put single quotes into double quotes</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">#           # the string $&#39;b is then quoted as &#39;$&#39;&quot;&#39;&quot;&#39;b&#39;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">#           return &quot;&#39;&quot; + str_.replace(&quot;&#39;&quot;, &quot;&#39;\&quot;&#39;\&quot;&#39;&quot;) + &quot;&#39;&quot;</span></div>
+ </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -329,7 +383,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_o_s.html">OS</a></li><li class="navelem"><a class="el" href="namespace_o_s_1_1___o_s.html">_OS</a></li><li class="navelem"><a class="el" href="class_o_s_1_1___o_s_1_1___o_s.html">_OS</a></li>
-    <li class="footer">Generated on Mon Feb 4 2013 17:34:54 for py.OS by
+    <li class="footer">Generated on Thu Mar 28 2013 15:36:06 for py.OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

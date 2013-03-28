@@ -1,4 +1,10 @@
 <map id="object" name="object">
-<area shape="rect" id="node3" href="$class_o_s_1_1_g_p_g_1_1_g_p_g.html" title="Quick GNUPG implementation with common functions, using the command line interface." alt="" coords="5,131,128,267"/>
-<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1yum_1_1___yum_dummy_callback.html" title="{OS.pkg.yum._YumDummyCallback\n||+ event()\l}" alt="" coords="153,160,375,237"/>
+<area shape="rect" id="node2" href="$class_o_s_1_1___o_s_1_1_c_m_d___proc.html" title="{OS._OS.CMD_Proc\n|+ cmd\l|+ __init__()\l}" alt="" coords="43,189,181,267"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1___o_s_1_1_c_m_d___proc_exception.html" title="{OS._OS.CMD_ProcException\n|+ proc\l|+ __init__()\l}" alt="" coords="225,189,420,267"/>
+<area shape="rect" id="node7" href="$class_o_s_1_1_g_p_g_1_1_g_p_g.html" title="Quick GNUPG implementation with common functions, using the command line interface." alt="" coords="444,131,633,325"/>
+<area shape="rect" id="node8" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html" title="{OS.pkg._base.PackageManager\n||+ __init__()\l+ isSupported()\l+ updatePackageIndex()\l+ install()\l+ update()\l+ remove()\l+ isInstalled()\l+ isAvailable()\l}" alt="" coords="657,138,868,318"/>
+<area shape="rect" id="node9" href="$class_o_s_1_1pkg_1_1__yum_1_1___yum_dummy_callback.html" title="{OS.pkg._yum._YumDummyCallback\n||+ event()\l}" alt="" coords="893,189,1123,267"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html" title="{OS._OS.CMD_ProcOutput\n|+ returnCode\l+ stdout\l+ stderr\l|+ __init__()\l}" alt="" coords="5,373,181,480"/>
+<area shape="rect" id="node5" href="$class_o_s_1_1___o_s_1_1_c_m_d___proc_output_exception.html" title="{OS._OS.CMD_ProcOutputException\n||+ __init__()\l}" alt="" coords="206,388,439,465"/>
+<area shape="rect" id="node6" href="$class_o_s_1_1pkg_1_1__base_1_1_c_m_d___proc_exception.html" title="{OS.pkg._base.CMD_ProcException\n|+ originalException\l|+ __init__()\l}" alt="" coords="463,388,691,465"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="OS.pkg._yum._EPEL.install" name="OS.pkg._yum._EPEL.install">
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#ae6235991c2c72e8eb41a5bc8543f2808" title="OS.pkg._apt.AptInstaller.is\lSupported" alt="" coords="233,5,405,46"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#ab78460e53fabcaf52835cc135f6a02a7" title="OS.pkg._base.PackageManager.\l__init__" alt="" coords="454,5,669,46"/>
+</map>

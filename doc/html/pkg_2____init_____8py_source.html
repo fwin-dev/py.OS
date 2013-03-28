@@ -102,37 +102,40 @@ $(document).ready(function(){initNavTree('pkg_2____init_____8py_source.html','')
 <div class="title">__init__.py</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="pkg_2____init_____8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html">    1</a></span>&#160;<span class="keyword">from</span> macports <span class="keyword">import</span> isMacPortOS, MacPortInstaller</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">from</span> apt <span class="keyword">import</span> isAptOS, AptInstaller</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">from</span> yum <span class="keyword">import</span> isYumOS, YumInstaller</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> sys, inspect</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html#adf35db3d71468e6a873270ad61d9ce59">    7</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespace_o_s_1_1pkg.html#adf35db3d71468e6a873270ad61d9ce59">isSupported</a>():</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_o_s_1_1pkg_1_1apt.html#a14a7985c0f735ac3c5bb2ac45f10d314">isAptOS</a>() <span class="keywordflow">or</span> <a class="code" href="namespace_o_s_1_1pkg_1_1yum.html#a0d14edab16aee3ddd8c9a5895803ed15">isYumOS</a>() <span class="keywordflow">or</span> <a class="code" href="namespace_o_s_1_1pkg_1_1macports.html#a0b70019f184c3b85d41b37a23c888fc4">isMacPortOS</a>()</div>
+<a href="pkg_2____init_____8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html">    1</a></span>&#160;<span class="keyword">from</span> _macports <span class="keyword">import</span> MacPortInstaller</div>
+<div class="line"><a name="l00002"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html#afd7c7052bc473653acdc7a56cd786daf">    2</a></span>&#160;isMacPortOS = MacPortInstaller.isSupported</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">from</span> _apt <span class="keyword">import</span> AptInstaller</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html#a23b851ffe7072bbf874710d33d93cd12">    4</a></span>&#160;isAptOS = AptInstaller.isSupported</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">from</span> _yum <span class="keyword">import</span> YumInstaller</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html#abb90762fcd895ff5a38eb25d4f9f5354">    6</a></span>&#160;isYumOS = YumInstaller.isSupported</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> sys, inspect</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordflow">if</span> <a class="code" href="namespace_o_s_1_1pkg_1_1apt.html#a14a7985c0f735ac3c5bb2ac45f10d314">isAptOS</a>():</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html#a3e8d2808c1650bc66cd39977f4d4f78a">   11</a></span>&#160;    _class = AptInstaller()</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordflow">elif</span> <a class="code" href="namespace_o_s_1_1pkg_1_1yum.html#a0d14edab16aee3ddd8c9a5895803ed15">isYumOS</a>():</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    _class = YumInstaller()</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordflow">elif</span> <a class="code" href="namespace_o_s_1_1pkg_1_1macports.html#a0b70019f184c3b85d41b37a23c888fc4">isMacPortOS</a>():</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    _class = MacPortInstaller()</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    _class = <span class="keywordtype">None</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordflow">if</span> _class != <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html#a0e544096c1d4059984fa69291c45f095">   20</a></span>&#160;    _thisModule = sys.modules[__name__]</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">for</span> name, func <span class="keywordflow">in</span> inspect.getmembers(_class):</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> inspect.ismethod(func) <span class="keywordflow">and</span> name[0] != <span class="stringliteral">&quot;_&quot;</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            setattr(_thisModule, name, func)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html#adf35db3d71468e6a873270ad61d9ce59">   10</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespace_o_s_1_1pkg.html#adf35db3d71468e6a873270ad61d9ce59">isSupported</a>():</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_o_s_1_1pkg.html#a23b851ffe7072bbf874710d33d93cd12">isAptOS</a>() <span class="keywordflow">or</span> <a class="code" href="namespace_o_s_1_1pkg.html#abb90762fcd895ff5a38eb25d4f9f5354">isYumOS</a>() <span class="keywordflow">or</span> <a class="code" href="namespace_o_s_1_1pkg.html#afd7c7052bc473653acdc7a56cd786daf">isMacPortOS</a>()</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordflow">if</span> <a class="code" href="namespace_o_s_1_1pkg.html#a23b851ffe7072bbf874710d33d93cd12">isAptOS</a>():</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html#a3e8d2808c1650bc66cd39977f4d4f78a">   14</a></span>&#160;    _class = AptInstaller()</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordflow">elif</span> <a class="code" href="namespace_o_s_1_1pkg.html#abb90762fcd895ff5a38eb25d4f9f5354">isYumOS</a>():</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    _class = YumInstaller()</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordflow">elif</span> <a class="code" href="namespace_o_s_1_1pkg.html#afd7c7052bc473653acdc7a56cd786daf">isMacPortOS</a>():</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    _class = MacPortInstaller()</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    _class = <span class="keywordtype">None</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordflow">if</span> _class != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html#a0e544096c1d4059984fa69291c45f095">   23</a></span>&#160;    _thisModule = sys.modules[__name__]</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">for</span> name, func <span class="keywordflow">in</span> inspect.getmembers(_class):</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> inspect.ismethod(func) <span class="keywordflow">and</span> name[0] != <span class="stringliteral">&quot;_&quot;</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            setattr(_thisModule, name, func)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_54f5ad4811a0c3ecf9d1d7b037b5d3a4.html">OS</a></li><li class="navelem"><a class="el" href="dir_55e898a8788cd6b0f08be09b3d51822e.html">pkg</a></li><li class="navelem"><a class="el" href="pkg_2____init_____8py.html">__init__.py</a></li>
-    <li class="footer">Generated on Mon Feb 4 2013 17:34:53 for py.OS by
+    <li class="footer">Generated on Thu Mar 28 2013 15:36:05 for py.OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

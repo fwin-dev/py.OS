@@ -1,0 +1,5 @@
+<map id="OS.pkg._apt.AptInstaller.isAvailable" name="OS.pkg._apt.AptInstaller.isAvailable">
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#add22a65cf270c6c0f285e124ac430f60" title="Updates the package manager&#39;s package index using the network." alt="" coords="227,38,482,79"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#ad2fa22e454c7a7eccf266a57f982cb4e" title="OS.pkg._apt.AptInstaller.\l_updatePackageIndex" alt="" coords="557,5,720,46"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a039eb503da3849c3c87b6395a5216ea6" title="OS.pkg._base.PackageManager.\l_updatePackageIndex" alt="" coords="531,70,746,111"/>
+</map>

@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('index_8md.html','');});
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;# Summary of functionality</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;* Finding a suitable <a class="code" href="namespace_o_s_1_1_describe_o_s.html#a3f421a92e81608c6629b1bff83a9bf46">version</a> of python installed in the OS <span class="keywordflow">for</span> compatibility reasons</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;* Finding a suitable version of python installed in the OS <span class="keywordflow">for</span> compatibility reasons</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;* Retrieving general operating system information</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;* Interacting with operating system services - start, stop, restart, <span class="keyword">set</span> boot state, etc.</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;* Interacting with the OS <span class="keyword">package </span>manager (apt, yum, macports) - installing, removing, upgrading, etc.</div>
@@ -257,26 +257,47 @@ $(document).ready(function(){initNavTree('index_8md.html','');});
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    from OS import GPG</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;These features are self-explanatory with a quick glance at the code in OS.GPG</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;### Import a public or private key to the local keyring</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;### Import a key to the local keyring</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;### Get a key&#39;s ID</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;### Check if a key is imported</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;### Encrypt a file</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;### Decrypt a file</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    GPG.importPublicKey(filePath)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    GPG.importPrivateKey(filePath)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;### Get a key&#39;s ID</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    id = GPG.getKeyID(filename)</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;### Sign a key</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    GPG.signKey(id) </div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;### Change trust level on a key</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;Note that this is an interactive only function and requires the user&#39;s input, due to a limitation in the gnupg command line.</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    GPG.markKeyTrusted(id)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;### Check if a key is imported</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    GPG.isKeyImported(id)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;### Encrypt a file</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    outputFilePath = GPG.encrypt(inputFilePath, keyID)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;### Decrypt a file</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;Note that `password` is only required if the private key requires a password.</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    outputFilePath = GPG.decrypt(inputFilePath, password)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="index_8md.html">index.md</a></li>
-    <li class="footer">Generated on Mon Feb 4 2013 17:34:53 for py.OS by
+    <li class="footer">Generated on Thu Mar 28 2013 15:36:04 for py.OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

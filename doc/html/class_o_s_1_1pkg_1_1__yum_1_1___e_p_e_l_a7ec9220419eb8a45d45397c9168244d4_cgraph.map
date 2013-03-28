@@ -1,0 +1,7 @@
+<map id="OS.pkg._yum._EPEL.install" name="OS.pkg._yum._EPEL.install">
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#a1cd4147589ee55bebc8356005ca87c9c" title="OS.pkg._apt.AptInstaller.is\lInstalled" alt="" coords="258,5,430,46"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a2d8c330852d08b52124e7cab9cc7f6ba" title="Must be executable without requiring root privileges." alt="" coords="233,70,455,111"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__macports_1_1_mac_port_installer.html#a26a0ac6f4da6f4aa96aee08ec7d27ee5" title="OS.pkg._macports.MacPort\lInstaller.isInstalled" alt="" coords="255,135,433,177"/>
+<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1__yum_1_1___e_p_e_l.html#a596ad970403d6b45e6474ab7af9fab34" title="OS.pkg._yum._EPEL.isInstalled" alt="" coords="243,201,445,228"/>
+<area shape="rect" id="node6" href="$class_o_s_1_1pkg_1_1__yum_1_1___e_p_e_l.html#a508814bd34851b3b6f69ced225fb93b2" title="OS.pkg._yum._EPEL.\l_findBestEPEL" alt="" coords="271,253,417,294"/>
+</map>

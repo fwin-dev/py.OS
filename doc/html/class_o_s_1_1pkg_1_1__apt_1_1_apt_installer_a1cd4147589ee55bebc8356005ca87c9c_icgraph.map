@@ -1,0 +1,6 @@
+<map id="OS.pkg._apt.AptInstaller.isInstalled" name="OS.pkg._apt.AptInstaller.isInstalled">
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a7d0ca35a8011599b3dd74ed6b8673e2d" title="OS.pkg._base.PackageManager.install" alt="" coords="227,5,472,32"/>
+<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1__yum_1_1___e_p_e_l.html#a7ec9220419eb8a45d45397c9168244d4" title="OS.pkg._yum._EPEL.install" alt="" coords="260,56,439,83"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#ae6235991c2c72e8eb41a5bc8543f2808" title="OS.pkg._apt.AptInstaller.is\lSupported" alt="" coords="521,23,693,65"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#ab78460e53fabcaf52835cc135f6a02a7" title="OS.pkg._base.PackageManager.\l__init__" alt="" coords="742,23,957,65"/>
+</map>

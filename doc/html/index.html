@@ -190,18 +190,28 @@ OS.pkg.installRepo_allKeys()
 <h2>GPG</h2>
 <p>The following is accessible by using the GPG module: </p>
 <pre class="fragment">from OS import GPG
-</pre><p>These features are self-explanatory with a quick glance at the code in OS.GPG</p>
-<h3>Import a key to the local keyring</h3>
-<h3>Get a key's ID</h3>
-<h3>Check if a key is imported</h3>
-<h3>Encrypt a file</h3>
-<h3>Decrypt a file</h3>
-</div></div><!-- contents -->
+</pre><h3>Import a public or private key to the local keyring</h3>
+<pre class="fragment">GPG.importPublicKey(filePath)
+GPG.importPrivateKey(filePath)
+</pre><h3>Get a key's ID</h3>
+<pre class="fragment">id = GPG.getKeyID(filename)
+</pre><h3>Sign a key</h3>
+<pre class="fragment">GPG.signKey(id) 
+</pre><h3>Change trust level on a key</h3>
+<p>Note that this is an interactive only function and requires the user's input, due to a limitation in the gnupg command line. </p>
+<pre class="fragment">GPG.markKeyTrusted(id)
+</pre><h3>Check if a key is imported</h3>
+<pre class="fragment">GPG.isKeyImported(id)
+</pre><h3>Encrypt a file</h3>
+<pre class="fragment">outputFilePath = GPG.encrypt(inputFilePath, keyID)
+</pre><h3>Decrypt a file</h3>
+<p>Note that <code>password</code> is only required if the private key requires a password. </p>
+<pre class="fragment">outputFilePath = GPG.decrypt(inputFilePath, password)</pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 4 2013 17:34:55 for py.OS by
+    <li class="footer">Generated on Thu Mar 28 2013 15:36:09 for py.OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

@@ -110,11 +110,13 @@ $(document).ready(function(){initNavTree('namespace_o_s_1_1pkg.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespace_o_s_1_1pkg_1_1apt"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg_1_1apt.html">apt</a></td></tr>
+<tr class="memitem:namespace_o_s_1_1pkg_1_1__apt"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg_1_1__apt.html">_apt</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_o_s_1_1pkg_1_1macports"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg_1_1macports.html">macports</a></td></tr>
+<tr class="memitem:namespace_o_s_1_1pkg_1_1__base"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg_1_1__base.html">_base</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_o_s_1_1pkg_1_1yum"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg_1_1yum.html">yum</a></td></tr>
+<tr class="memitem:namespace_o_s_1_1pkg_1_1__macports"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg_1_1__macports.html">_macports</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_o_s_1_1pkg_1_1__yum"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg_1_1__yum.html">_yum</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -124,6 +126,12 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:afd7c7052bc473653acdc7a56cd786daf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg.html#afd7c7052bc473653acdc7a56cd786daf">isMacPortOS</a> MacPortInstaller.isSupported</td></tr>
+<tr class="separator:afd7c7052bc473653acdc7a56cd786daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b851ffe7072bbf874710d33d93cd12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg.html#a23b851ffe7072bbf874710d33d93cd12">isAptOS</a> AptInstaller.isSupported</td></tr>
+<tr class="separator:a23b851ffe7072bbf874710d33d93cd12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb90762fcd895ff5a38eb25d4f9f5354"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg.html#abb90762fcd895ff5a38eb25d4f9f5354">isYumOS</a> YumInstaller.isSupported</td></tr>
+<tr class="separator:abb90762fcd895ff5a38eb25d4f9f5354"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e8d2808c1650bc66cd39977f4d4f78a"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg.html#a3e8d2808c1650bc66cd39977f4d4f78a">_class</a> AptInstaller()</td></tr>
 <tr class="separator:a3e8d2808c1650bc66cd39977f4d4f78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e544096c1d4059984fa69291c45f095"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_s_1_1pkg.html#a0e544096c1d4059984fa69291c45f095">_thisModule</a> sys.modules[__name__]</td></tr>
@@ -143,20 +151,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pkg_2____init_____8py_source.html#l00007">7</a> of file <a class="el" href="pkg_2____init_____8py_source.html">__init__.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html#adf35db3d71468e6a873270ad61d9ce59">    7</a></span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">def </span><a class="code" href="namespace_o_s_1_1pkg.html#adf35db3d71468e6a873270ad61d9ce59">isSupported</a>():</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_o_s_1_1pkg_1_1apt.html#a14a7985c0f735ac3c5bb2ac45f10d314">isAptOS</a>() <span class="keywordflow">or</span> <a class="code" href="namespace_o_s_1_1pkg_1_1yum.html#a0d14edab16aee3ddd8c9a5895803ed15">isYumOS</a>() <span class="keywordflow">or</span> <a class="code" href="namespace_o_s_1_1pkg_1_1macports.html#a0b70019f184c3b85d41b37a23c888fc4">isMacPortOS</a>()</div>
+<p>Definition at line <a class="el" href="pkg_2____init_____8py_source.html#l00010">10</a> of file <a class="el" href="pkg_2____init_____8py_source.html">__init__.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1pkg.html#adf35db3d71468e6a873270ad61d9ce59">   10</a></span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">def </span><a class="code" href="namespace_o_s_1_1pkg.html#adf35db3d71468e6a873270ad61d9ce59">isSupported</a>():</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_o_s_1_1pkg.html#a23b851ffe7072bbf874710d33d93cd12">isAptOS</a>() <span class="keywordflow">or</span> <a class="code" href="namespace_o_s_1_1pkg.html#abb90762fcd895ff5a38eb25d4f9f5354">isYumOS</a>() <span class="keywordflow">or</span> <a class="code" href="namespace_o_s_1_1pkg.html#afd7c7052bc473653acdc7a56cd786daf">isMacPortOS</a>()</div>
 </div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespace_o_s_1_1pkg_adf35db3d71468e6a873270ad61d9ce59_cgraph.svg" width="398" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -170,7 +170,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pkg_2____init_____8py_source.html#l00011">11</a> of file <a class="el" href="pkg_2____init_____8py_source.html">__init__.py</a>.</p>
+<p>Definition at line <a class="el" href="pkg_2____init_____8py_source.html#l00014">14</a> of file <a class="el" href="pkg_2____init_____8py_source.html">__init__.py</a>.</p>
 
 </div>
 </div>
@@ -184,7 +184,49 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="pkg_2____init_____8py_source.html#l00020">20</a> of file <a class="el" href="pkg_2____init_____8py_source.html">__init__.py</a>.</p>
+<p>Definition at line <a class="el" href="pkg_2____init_____8py_source.html#l00023">23</a> of file <a class="el" href="pkg_2____init_____8py_source.html">__init__.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a23b851ffe7072bbf874710d33d93cd12"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OS.pkg.isAptOS AptInstaller.isSupported</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pkg_2____init_____8py_source.html#l00004">4</a> of file <a class="el" href="pkg_2____init_____8py_source.html">__init__.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd7c7052bc473653acdc7a56cd786daf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OS.pkg.isMacPortOS MacPortInstaller.isSupported</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pkg_2____init_____8py_source.html#l00002">2</a> of file <a class="el" href="pkg_2____init_____8py_source.html">__init__.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb90762fcd895ff5a38eb25d4f9f5354"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OS.pkg.isYumOS YumInstaller.isSupported</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pkg_2____init_____8py_source.html#l00006">6</a> of file <a class="el" href="pkg_2____init_____8py_source.html">__init__.py</a>.</p>
 
 </div>
 </div>
@@ -194,7 +236,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_o_s.html">OS</a></li><li class="navelem"><a class="el" href="namespace_o_s_1_1pkg.html">pkg</a></li>
-    <li class="footer">Generated on Mon Feb 4 2013 17:34:54 for py.OS by
+    <li class="footer">Generated on Thu Mar 28 2013 15:36:07 for py.OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

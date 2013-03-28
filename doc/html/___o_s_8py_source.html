@@ -102,109 +102,145 @@ $(document).ready(function(){initNavTree('___o_s_8py_source.html','');});
 <div class="title">_OS.py</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="___o_s_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1___o_s.html">    1</a></span>&#160;<span class="keyword">from</span> DescribeOS <span class="keyword">import</span> *</div>
+<a href="___o_s_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1___o_s.html">    1</a></span>&#160;<span class="keyword">from</span> <a class="code" href="namespace_lang_1_1_describe_o_s.html">Lang.DescribeOS</a> <span class="keyword">import</span> *</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> shlex, subprocess, os, sys</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> random, string</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html">CMDProcOutput</a>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html#a2b4c8a35b91a53cbcef63e97cdef19f5">    7</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html#a2b4c8a35b91a53cbcef63e97cdef19f5">__init__</a>(self, cmd, returnCode, stdout, stderr):</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html#a732688932087c06da00b38bb5fc25bda">    8</a></span>&#160;        self.<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html#a732688932087c06da00b38bb5fc25bda">cmd</a> = cmd</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html#abc68d039319b7113e607d9a4558598e0">    9</a></span>&#160;        self.<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html#abc68d039319b7113e607d9a4558598e0">returnCode</a> = returnCode</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html#a4d76b6a425822cb7c5d2b43a0ce3e286">   10</a></span>&#160;        self.<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html#a4d76b6a425822cb7c5d2b43a0ce3e286">stdout</a> = stdout</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html#af1d9d4be0c3b541cea796f8ae976f51c">   11</a></span>&#160;        self.<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html#af1d9d4be0c3b541cea796f8ae976f51c">stderr</a> = stderr</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html">_OS</a>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a4fb297773e6a68d39fca731a36be283b">   14</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a4fb297773e6a68d39fca731a36be283b">__init__</a>(self):</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">pass</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    @classmethod</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">##</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment"># </span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">#       Determines if your python script was invoked by a user with root permissions (run as root or using sudo).</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">#       </span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">#       @param assertTrue   bool:   Will throw an Exception if no root permissions.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">#       @param shouldExit   bool:   If True, your program will exit if there are no root permissions.</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">#       @return             bool:   True if script has root permissions, False otherwise.</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">#       </span></div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a418b4ee48548d1af4a20a6d7922dc42b">   26</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a418b4ee48548d1af4a20a6d7922dc42b" title="Determines if your python script was invoked by a user with root permissions (run as root or using su...">hasRootPermissions</a>(cls, assertTrue=False, shouldExit=True):</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">if</span> assertTrue <span class="keywordflow">and</span> os.geteuid() != 0:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">raise</span> <a class="code" href="class_exception.html">Exception</a>()</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> <span class="keywordflow">not</span> shouldExit:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">raise</span> <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;You must run this script with sudo or as root&quot;</span>)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                sys.exit(<span class="stringliteral">&quot;You must run this script with sudo or as root&quot;</span>)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> os.geteuid() == 0</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    @classmethod</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">##</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment"># </span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">#       Runs a command on the terminal.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> pipes, shlex, subprocess, os, sys</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc.html">CMD_Proc</a>(<a class="code" href="classobject.html">object</a>):</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc.html#a688b449abf551af985fa111306d5e657">    6</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc.html#a688b449abf551af985fa111306d5e657">__init__</a>(self, cmd):</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc.html#a9282196fd2b461269029ecf1bf6432b9">    7</a></span>&#160;        self.<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc.html#a9282196fd2b461269029ecf1bf6432b9">cmd</a> = cmd</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html">CMD_ProcOutput</a>(<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc.html">CMD_Proc</a>):</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html#a5dc35a419873e250eb034d2ce60bc174">   10</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html#a5dc35a419873e250eb034d2ce60bc174">__init__</a>(self, cmd, returnCode, stdout, stderr):</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        super(CMD_ProcOutput, self).<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html#a5dc35a419873e250eb034d2ce60bc174">__init__</a>(cmd)</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html#a90c714229249b5e1cfb5dd94c68b9a36">   12</a></span>&#160;        self.<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html#a90c714229249b5e1cfb5dd94c68b9a36">returnCode</a> = returnCode</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html#a1603a481928a7aaf2f3c1e88eca73ae4">   13</a></span>&#160;        self.<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html#a1603a481928a7aaf2f3c1e88eca73ae4">stdout</a> = stdout</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html#a15f5df730da7cd9b80c80c696878c3f4">   14</a></span>&#160;        self.<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html#a15f5df730da7cd9b80c80c696878c3f4">stderr</a> = stderr</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_exception.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_exception.html">CMD_ProcException</a>(<a class="code" href="class_exception.html">Exception</a>, <a class="code" href="classobject.html">object</a>):</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_exception.html#a541ecbfe08c29f45563f66fd1c2a3ae4">   17</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_exception.html#a541ecbfe08c29f45563f66fd1c2a3ae4">__init__</a>(self, proc, message=None):</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_exception.html#aa9052433104763d001bfe98819fc8e0a">   18</a></span>&#160;        self.<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_exception.html#aa9052433104763d001bfe98819fc8e0a">proc</a> = proc</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span> message == <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            message = <span class="stringliteral">&quot;Command: &#39;&quot;</span> + self.proc.cmd + <span class="stringliteral">&quot;&#39; could not be executed&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        super(CMD_ProcException, self).<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_exception.html#a541ecbfe08c29f45563f66fd1c2a3ae4">__init__</a>(message)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output_exception.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output_exception.html">CMD_ProcOutputException</a>(<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_exception.html">CMD_ProcException</a>):</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output_exception.html#a38361ee069069bce756885e1fd91b841">   24</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output_exception.html#a38361ee069069bce756885e1fd91b841">__init__</a>(self, cmdProcOutput):</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        message = <span class="stringliteral">&quot;Command: &#39;&quot;</span> + cmdProcOutput.cmd + <span class="stringliteral">&quot;&#39; returned &quot;</span> + str(cmdProcOutput.returnCode)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        super(CMD_ProcOutputException, self).<a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output_exception.html#a38361ee069069bce756885e1fd91b841">__init__</a>(cmdProcOutput, message=message)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html">_OS</a>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a4fb297773e6a68d39fca731a36be283b">   29</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a4fb297773e6a68d39fca731a36be283b">__init__</a>(self):</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">pass</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    @classmethod</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">##</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment"># </span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">#       Determines if your python script was invoked by a user with root permissions (run as root or using sudo).</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">#       </span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">#       @param assertTrue   bool:   Will throw an Exception if no root permissions.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">#       @param shouldExit   bool:   If True, your program will exit if there are no root permissions.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">#       @return             bool:   True if script has root permissions, False otherwise.</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">#       </span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">#       @param params           iterable(str):  Parameters to substitute into command. If given, command must contain a %s for each parameter.</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">#       @param assertSuccess    bool:           If True, will throw an Exception if the command returns a non-zero exit code.</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">#       @param useBash          bool:           Use the bash environment to execute the command.</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">#       @param variables        dict{str:str}:  Environment variables to set before the command executes. The keys are environment variable names.</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">#       @param printOutput      bool:           If True, prints the stdout of the command to the screen.</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">#       @param inputStr         str:            A string to write to the process&#39;s stdin.</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">#       </span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">#       @return CMDProcOutput: An instance through which stdout, stderr, and return code of the process can be accessed.</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">#       </span></div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#ae96f5e37a5bec97f506bd24cf5b34e46">   50</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#ae96f5e37a5bec97f506bd24cf5b34e46" title="Runs a command on the terminal.">runCMD</a>(cls, command, params=None, assertSuccess=True, useBash=False, variables=None, printOutput=False, inputStr=None):</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> params != <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> <span class="keywordflow">not</span> hasattr(params, <span class="stringliteral">&quot;__iter__&quot;</span>):</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                params = (params,)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            params = [str(param).replace(<span class="stringliteral">&quot; &quot;</span>, <span class="stringliteral">&quot;\\ &quot;</span>) <span class="keywordflow">for</span> param <span class="keywordflow">in</span> params]</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            command = command % tuple(params)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        popenKwargs = {<span class="stringliteral">&quot;stdout&quot;</span>: subprocess.PIPE, <span class="stringliteral">&quot;stderr&quot;</span>: subprocess.PIPE}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> useBash <span class="keywordflow">or</span> variables != <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">if</span> variables != <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                useBash = <span class="keyword">True</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                temp = os.environ.copy()</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                temp.update(variables)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                variables = temp</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            popenKwargs.update({<span class="stringliteral">&quot;shell&quot;</span>:<span class="keyword">True</span>, <span class="stringliteral">&quot;executable&quot;</span>:<span class="stringliteral">&quot;/bin/bash&quot;</span>, <span class="stringliteral">&quot;env&quot;</span>:variables})</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        comKwargs = {}</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span> inputStr != <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            popenKwargs[<span class="stringliteral">&quot;stdin&quot;</span>] = subprocess.PIPE</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            comKwargs[<span class="stringliteral">&quot;input&quot;</span>] = inputStr</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">try</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            proc = subprocess.Popen(shlex.split(command), **popenKwargs)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">except</span> OSError:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            stdout = stderr = <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            resultCode = -1</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            stdout, stderr = proc.communicate(**comKwargs)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            resultCode = proc.wait()</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">if</span> resultCode != 0 <span class="keywordflow">and</span> assertSuccess:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            print(stderr)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">raise</span> <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;Command: &#39;&quot;</span> + command + <span class="stringliteral">&quot;&#39; returned &quot;</span> + str(resultCode))</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">if</span> printOutput:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            print(stdout)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d_proc_output.html">CMDProcOutput</a>(command, resultCode, stdout, stderr)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">import</span> inspect</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1___o_s.html#a031614a61dc38396525adbe467d83679">   90</a></span>&#160;_thisModule = sys.modules[__name__]</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1___o_s.html#a38cf5d68454b4620ddefb1f183466530">   91</a></span>&#160;_class = <a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html">_OS</a>()</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordflow">for</span> name, func <span class="keywordflow">in</span> inspect.getmembers(_class):</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> inspect.ismethod(func) <span class="keywordflow">and</span> name[0] != <span class="stringliteral">&quot;_&quot;</span>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        setattr(_thisModule, name, func)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a418b4ee48548d1af4a20a6d7922dc42b">   41</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a418b4ee48548d1af4a20a6d7922dc42b" title="Determines if your python script was invoked by a user with root permissions (run as root or using su...">hasRootPermissions</a>(cls, assertTrue=False, shouldExit=False):</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> assertTrue <span class="keywordflow">and</span> os.geteuid() != 0:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> <span class="keywordflow">not</span> shouldExit:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">raise</span> <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;You must run this script with sudo or as root&quot;</span>)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                sys.exit(<span class="stringliteral">&quot;You must run this script with sudo or as root&quot;</span>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> os.geteuid() == 0</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    @classmethod</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">##</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment"># </span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">#       @return str:    The terminal command with command line parameters, escaped if needed</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">#       </span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a6071bac4997a41f753a9a190a59b124a">   55</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#a6071bac4997a41f753a9a190a59b124a">runCMD_getFullCMD</a>(cls, command, params=None):</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> params != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span> <span class="keywordflow">not</span> hasattr(params, <span class="stringliteral">&quot;__iter__&quot;</span>):</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                params = (params,)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">for</span> param <span class="keywordflow">in</span> params:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keyword">assert</span> isinstance(param, basestring)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            params = [pipes.quote(param) <span class="keywordflow">for</span> param <span class="keywordflow">in</span> params]</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            command = command % tuple(params)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> command</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">#   @classmethod</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">#   def _escape(cls):</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">#       _find_unsafe = re.compile(r&quot;[^a-zA-Z0-9]&quot;).search</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">#       def _shlex_quote(str_):</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">#           if _find_unsafe(str_) is None:</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">#               return str_</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">#           # use single quotes, and put single quotes into double quotes</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">#           # the string $&#39;b is then quoted as &#39;$&#39;&quot;&#39;&quot;&#39;b&#39;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">#           return &quot;&#39;&quot; + str_.replace(&quot;&#39;&quot;, &quot;&#39;\&quot;&#39;\&quot;&#39;&quot;) + &quot;&#39;&quot;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    @classmethod</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">##</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment"># </span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">#       Runs a command on the terminal.</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">#       </span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">#       @param params           iterable(str):  Parameters to substitute into command. If given, command must contain a %s for each parameter.</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">#       @param assertSuccess    bool:           If True, will throw an Exception if the command returns a non-zero exit code.</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">#       @param useBash          bool:           Use the bash environment to execute the command.</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">#       @param variables        dict{str:str}:  Environment variables to set before the command executes. The keys are environment variable names.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">#       @param printOutput      bool:           If True, prints the stdout of the command to the screen.</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">#       @param inputStr         str:            A string to write to the process&#39;s stdin.</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">#       </span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">#       @return CMD_ProcOutput: An instance through which stdout, stderr, and return code of the process can be accessed.</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">#       </span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#ae96f5e37a5bec97f506bd24cf5b34e46">   89</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html#ae96f5e37a5bec97f506bd24cf5b34e46" title="Runs a command on the terminal.">runCMD</a>(cls, command, params=None, assertSuccess=True, useBash=True, variables=None, printOutput=False, inputStr=None):</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        command = cls.runCMD_getFullCMD(command, params)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        popenKwargs = {<span class="stringliteral">&quot;stdout&quot;</span>: subprocess.PIPE, <span class="stringliteral">&quot;stderr&quot;</span>: subprocess.PIPE}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span> useBash <span class="keywordflow">or</span> variables != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">if</span> variables != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                useBash = <span class="keyword">True</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                temp = os.environ.copy()</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                temp.update(variables)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                variables = temp</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            popenKwargs.update({<span class="stringliteral">&quot;shell&quot;</span>:<span class="keyword">True</span>, <span class="stringliteral">&quot;executable&quot;</span>:<span class="stringliteral">&quot;/bin/bash&quot;</span>, <span class="stringliteral">&quot;env&quot;</span>:variables})</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">else</span>:   <span class="comment"># when shell==False, Popen expects command/arguments to be in a list</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            command = shlex.split(command)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        comKwargs = {}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> inputStr != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            popenKwargs[<span class="stringliteral">&quot;stdin&quot;</span>] = subprocess.PIPE</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            comKwargs[<span class="stringliteral">&quot;input&quot;</span>] = inputStr</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">try</span>:</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            proc = subprocess.Popen(command, **popenKwargs)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">except</span> OSError:</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            stdout = stderr = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            resultCode = -1</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            stdout, stderr = proc.communicate(**comKwargs)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            resultCode = proc.wait()</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        cmdProcOutput = <a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output.html">CMD_ProcOutput</a>(command, resultCode, stdout, stderr)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">if</span> resultCode != 0 <span class="keywordflow">and</span> assertSuccess:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            print(stderr)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">raise</span> <a class="code" href="class_o_s_1_1___o_s_1_1_c_m_d___proc_output_exception.html">CMD_ProcOutputException</a>(cmdProcOutput)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> printOutput:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            print(stdout)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> cmdProcOutput</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">import</span> inspect</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1___o_s.html#a031614a61dc38396525adbe467d83679">  126</a></span>&#160;_thisModule = sys.modules[__name__]</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="code" href="namespace_o_s_1_1___o_s.html#a38cf5d68454b4620ddefb1f183466530">  127</a></span>&#160;_class = <a class="code" href="class_o_s_1_1___o_s_1_1___o_s.html">_OS</a>()</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keywordflow">for</span> name, func <span class="keywordflow">in</span> inspect.getmembers(_class):</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">if</span> inspect.ismethod(func) <span class="keywordflow">and</span> name[0] != <span class="stringliteral">&quot;_&quot;</span>:</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        setattr(_thisModule, name, func)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_54f5ad4811a0c3ecf9d1d7b037b5d3a4.html">OS</a></li><li class="navelem"><a class="el" href="___o_s_8py.html">_OS.py</a></li>
-    <li class="footer">Generated on Mon Feb 4 2013 17:34:53 for py.OS by
+    <li class="footer">Generated on Thu Mar 28 2013 15:36:05 for py.OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

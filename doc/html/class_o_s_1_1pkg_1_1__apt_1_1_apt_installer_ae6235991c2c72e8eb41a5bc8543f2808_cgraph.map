@@ -1,0 +1,12 @@
+<map id="OS.pkg._apt.AptInstaller.isSupported" name="OS.pkg._apt.AptInstaller.isSupported">
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a7d0ca35a8011599b3dd74ed6b8673e2d" title="OS.pkg._base.PackageManager.install" alt="" coords="227,293,472,320"/>
+<area shape="rect" id="node8" href="$class_o_s_1_1pkg_1_1__yum_1_1___e_p_e_l.html#a7ec9220419eb8a45d45397c9168244d4" title="OS.pkg._yum._EPEL.install" alt="" coords="260,163,439,189"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#a1cd4147589ee55bebc8356005ca87c9c" title="OS.pkg._apt.AptInstaller.is\lInstalled" alt="" coords="546,187,718,229"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a2d8c330852d08b52124e7cab9cc7f6ba" title="Must be executable without requiring root privileges." alt="" coords="521,253,743,294"/>
+<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a96d015bb45e8fae7278a77e4e0c251df" title="OS.pkg._base.PackageManager.\l_execAsRoot_withPkgs" alt="" coords="525,318,739,359"/>
+<area shape="rect" id="node6" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#af0c36c4a71af6cc49103d7ca63e6d6ae" title="OS.pkg._apt.AptInstaller.\l_install" alt="" coords="551,383,713,425"/>
+<area shape="rect" id="node7" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a19fcb0397482254e3eb25188fd0ad575" title="OS.pkg._base.PackageManager.\l_install" alt="" coords="525,449,739,490"/>
+<area shape="rect" id="node9" href="$class_o_s_1_1pkg_1_1__macports_1_1_mac_port_installer.html#a26a0ac6f4da6f4aa96aee08ec7d27ee5" title="OS.pkg._macports.MacPort\lInstaller.isInstalled" alt="" coords="543,5,721,46"/>
+<area shape="rect" id="node10" href="$class_o_s_1_1pkg_1_1__yum_1_1___e_p_e_l.html#a596ad970403d6b45e6474ab7af9fab34" title="OS.pkg._yum._EPEL.isInstalled" alt="" coords="531,71,733,97"/>
+<area shape="rect" id="node11" href="$class_o_s_1_1pkg_1_1__yum_1_1___e_p_e_l.html#a508814bd34851b3b6f69ced225fb93b2" title="OS.pkg._yum._EPEL.\l_findBestEPEL" alt="" coords="559,122,705,163"/>
+</map>

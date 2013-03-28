@@ -153,15 +153,36 @@ The following is accessible by using the GPG module:
 
 	from OS import GPG
 
-These features are self-explanatory with a quick glance at the code in OS.GPG
+### Import a public or private key to the local keyring
 
-### Import a key to the local keyring
+	GPG.importPublicKey(filePath)
+	GPG.importPrivateKey(filePath)
 
 ### Get a key's ID
 
+	id = GPG.getKeyID(filename)
+
+### Sign a key
+
+	GPG.signKey(id)	
+
+### Change trust level on a key
+
+Note that this is an interactive only function and requires the user's input, due to a limitation in the gnupg command line.
+
+	GPG.markKeyTrusted(id)
+
 ### Check if a key is imported
+
+	GPG.isKeyImported(id)
 
 ### Encrypt a file
 
+	outputFilePath = GPG.encrypt(inputFilePath, keyID)
+
 ### Decrypt a file
+
+Note that `password` is only required if the private key requires a password.
+
+	outputFilePath = GPG.decrypt(inputFilePath, password)
 

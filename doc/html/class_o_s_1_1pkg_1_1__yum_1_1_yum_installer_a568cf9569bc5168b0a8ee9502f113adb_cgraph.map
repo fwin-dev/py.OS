@@ -1,0 +1,6 @@
+<map id="OS.pkg._yum.YumInstaller.installRepo_RPM" name="OS.pkg._yum.YumInstaller.installRepo_RPM">
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a654a774ee8938d8c391b995aa31f5c45" title="OS.pkg._base.PackageManager.\l_execAsRoot_terminalCommand" alt="" coords="259,5,474,46"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__yum_1_1_yum_installer.html#ab1c380d70e6d3c9610a8be5795f15bb7" title="OS.pkg._yum.YumInstaller.\l_installRepo_RPM" alt="" coords="279,70,454,111"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#aa28edc779458632cddeda65f4211943d" title="OS.pkg._apt.AptInstaller._init" alt="" coords="275,136,459,163"/>
+<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1__yum_1_1_yum_installer.html#abe677509100cf7114da15ca0294607ed" title="OS.pkg._yum.YumInstaller._init" alt="" coords="269,187,464,213"/>
+</map>

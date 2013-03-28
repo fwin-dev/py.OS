@@ -1,5 +1,0 @@
-<map id="OS.pkg.isSupported" name="OS.pkg.isSupported">
-<area shape="rect" id="node3" href="$namespace_o_s_1_1pkg_1_1apt.html#a14a7985c0f735ac3c5bb2ac45f10d314" title="OS.pkg.apt.isAptOS" alt="" coords="222,5,362,32"/>
-<area shape="rect" id="node5" href="$namespace_o_s_1_1pkg_1_1yum.html#a0d14edab16aee3ddd8c9a5895803ed15" title="OS.pkg.yum.isYumOS" alt="" coords="217,56,367,83"/>
-<area shape="rect" id="node7" href="$namespace_o_s_1_1pkg_1_1macports.html#a0b70019f184c3b85d41b37a23c888fc4" title="OS.pkg.macports.isMacPortOS" alt="" coords="192,107,392,133"/>
-</map>
