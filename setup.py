@@ -45,7 +45,7 @@ class InstallHook(_install):
 setup(
 	cmdclass = {"install": InstallHook},
 	name = "py.OS",
-	version = "0.5.1",
+	version = "1.0.0",
 	description = "Attempts to provide common operating system functions that are platform independent",
 	author = "Jesse Cowles",
 	author_email = "jcowles@indigital.net",
@@ -57,7 +57,7 @@ setup(
 	zip_safe = False,
 	classifiers = [
 		# http://pypi.python.org/pypi?%3Aaction=list_classifiers
-		"Development Status :: 4 - Beta",
+		"Development Status :: 5 - Production/Stable",
 		"Programming Language :: Python :: 2.6",
 		"Programming Language :: Python :: 2.7",
 		"Operating System :: POSIX :: Linux",
