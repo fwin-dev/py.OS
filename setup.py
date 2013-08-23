@@ -32,7 +32,7 @@ class InstallHook(_install):
 			try:
 				import yum
 			except ImportError:
-				raise Exception("Error: Could not find the python yum module. If you installed py.OS in a virtualenv, use the --system-site-packages to give access to python yum.")
+				raise Exception("Error: Could not find the python yum module. If you installed py.OS in a virtualenv, use --system-site-packages to give access to python yum. You will need to re-create the virtualenv to do this.")
 
 
 # To include documentation in the build, create a MANIFEST.in file with these lines:

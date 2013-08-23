@@ -47,6 +47,12 @@ The following is accessible by using the OS module:
 
 	OS.version
 
+### Determining the kernel version
+
+Always returns a list or tuple of 3 ints, ex. `[2, 6, 45]`
+
+	OS.getKernelVersion()
+
 ### Determining if an OS is unix/unix-like (Linux, Darwin, etc.)
 
 	OS.isUnix()
