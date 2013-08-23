@@ -23,17 +23,16 @@ class InstallHook(_install):
 		if DescribeOS.isDebianBased():
 			global requirements
 			requirements.append("python-apt")
-		# red hat based OSs come with a python yum module already installed
-		# macport CLI is used on OSX, so no modules are needed for it
-	
-	def postInstall(self):
-		from Lang import DescribeOS
-		if DescribeOS.isRedHatBased():
+		elif DescribeOS.isRedHatBased():
+			# red hat based OSs come with a python yum module already installed
 			try:
 				import yum
 			except ImportError:
 				raise Exception("Error: Could not find the python yum module. If you installed py.OS in a virtualenv, use --system-site-packages to give access to python yum. You will need to re-create the virtualenv to do this.")
-
+		# macport CLI is used on OSX, so no modules are needed for it
+	
+	def postInstall(self):
+		pass
 
 # To include documentation in the build, create a MANIFEST.in file with these lines:
 # recursive-exclude doc *
@@ -46,7 +45,7 @@ class InstallHook(_install):
 setup(
 	cmdclass = {"install": InstallHook},
 	name = "py.OS",
-	version = "1.0.1",
+	version = "1.0.2",
 	description = "Attempts to provide common operating system functions that are platform independent",
 	author = "Jesse Cowles",
 	author_email = "jcowles@indigital.net",
