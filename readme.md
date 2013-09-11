@@ -11,9 +11,7 @@ Note that for most of the functions/methods on this page, arguments are not list
 * Retrieving general operating system information
 * Interacting with operating system services - start, stop, restart, set boot state, etc.
 * Interacting with the OS package manager (apt, yum, macports) - installing, removing, upgrading, etc.
-* Miscellaneous APIs and scripts that do not yet have a home may also be included in this python OS package for various reasons. Currently, this includes:
-  * Removal of legacy LinuxCommon package, which used to be a master package containing py.OS, py.Net, py.Lang, and py.Disk
-  * GPG encryption/decryption library, which is not yet fully featured and is small enough to be included in the py.OS package
+* A simple GPG encryption/decryption library
 
 # Detailed functionality
 
