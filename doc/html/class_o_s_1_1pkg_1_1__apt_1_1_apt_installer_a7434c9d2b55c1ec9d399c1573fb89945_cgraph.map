@@ -1,5 +1,5 @@
 <map id="OS.pkg._apt.AptInstaller.__init__" name="OS.pkg._apt.AptInstaller.__init__">
-<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#aa28edc779458632cddeda65f4211943d" title="OS.pkg._apt.AptInstaller._init" alt="" coords="232,5,416,32"/>
-<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a96d015bb45e8fae7278a77e4e0c251df" title="OS.pkg._base.PackageManager.\l_execAsRoot_withPkgs" alt="" coords="217,57,431,98"/>
-<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#a6aeae617a8fc8df36f11231d11996971" title="OS.pkg._apt.AptInstaller.\l_installPyAptModule" alt="" coords="243,122,405,163"/>
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#aa28edc779458632cddeda65f4211943d" title="OS.pkg._apt.AptInstaller._init" alt="" coords="236,5,431,32"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a96d015bb45e8fae7278a77e4e0c251df" title="OS.pkg._base.PackageManager.\l_execAsRoot_withPkgs" alt="" coords="224,57,443,98"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#a6aeae617a8fc8df36f11231d11996971" title="OS.pkg._apt.AptInstaller.\l_installPyAptModule" alt="" coords="248,122,419,163"/>
 </map>

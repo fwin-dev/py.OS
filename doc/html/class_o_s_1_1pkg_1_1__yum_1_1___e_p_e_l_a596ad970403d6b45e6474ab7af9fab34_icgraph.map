@@ -1,5 +1,5 @@
 <map id="OS.pkg._yum._EPEL.isInstalled" name="OS.pkg._yum._EPEL.isInstalled">
-<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__yum_1_1___e_p_e_l.html#a7ec9220419eb8a45d45397c9168244d4" title="OS.pkg._yum._EPEL.install" alt="" coords="256,12,435,39"/>
-<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#ae6235991c2c72e8eb41a5bc8543f2808" title="OS.pkg._apt.AptInstaller.is\lSupported" alt="" coords="483,5,655,46"/>
-<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#ab78460e53fabcaf52835cc135f6a02a7" title="OS.pkg._base.PackageManager.\l__init__" alt="" coords="705,5,919,46"/>
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__yum_1_1___e_p_e_l.html#a7ec9220419eb8a45d45397c9168244d4" title="OS.pkg._yum._EPEL.install" alt="" coords="265,12,450,39"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#ae6235991c2c72e8eb41a5bc8543f2808" title="OS.pkg._apt.AptInstaller.is\lSupported" alt="" coords="499,5,679,46"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#ab78460e53fabcaf52835cc135f6a02a7" title="OS.pkg._base.PackageManager.\l__init__" alt="" coords="728,5,947,46"/>
 </map>

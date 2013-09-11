@@ -1,7 +1,7 @@
 <map id="OS.pkg._base.PackageManager.install" name="OS.pkg._base.PackageManager.install">
-<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#a1cd4147589ee55bebc8356005ca87c9c" title="OS.pkg._apt.AptInstaller.is\lInstalled" alt="" coords="325,5,497,46"/>
-<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a2d8c330852d08b52124e7cab9cc7f6ba" title="Must be executable without requiring root privileges." alt="" coords="299,70,522,111"/>
-<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a96d015bb45e8fae7278a77e4e0c251df" title="OS.pkg._base.PackageManager.\l_execAsRoot_withPkgs" alt="" coords="303,135,518,177"/>
-<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#af0c36c4a71af6cc49103d7ca63e6d6ae" title="OS.pkg._apt.AptInstaller.\l_install" alt="" coords="329,201,492,242"/>
-<area shape="rect" id="node6" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a19fcb0397482254e3eb25188fd0ad575" title="OS.pkg._base.PackageManager.\l_install" alt="" coords="303,266,518,307"/>
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#a1cd4147589ee55bebc8356005ca87c9c" title="OS.pkg._apt.AptInstaller.is\lInstalled" alt="" coords="331,5,511,46"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a2d8c330852d08b52124e7cab9cc7f6ba" title="Must be executable without requiring root privileges. " alt="" coords="307,70,535,111"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a96d015bb45e8fae7278a77e4e0c251df" title="OS.pkg._base.PackageManager.\l_execAsRoot_withPkgs" alt="" coords="312,135,531,177"/>
+<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#af0c36c4a71af6cc49103d7ca63e6d6ae" title="OS.pkg._apt.AptInstaller.\l_install" alt="" coords="336,201,507,242"/>
+<area shape="rect" id="node6" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a19fcb0397482254e3eb25188fd0ad575" title="OS.pkg._base.PackageManager.\l_install" alt="" coords="312,266,531,307"/>
 </map>

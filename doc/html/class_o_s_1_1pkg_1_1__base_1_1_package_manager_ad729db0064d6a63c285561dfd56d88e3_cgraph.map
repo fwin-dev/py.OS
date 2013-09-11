@@ -1,6 +1,6 @@
 <map id="OS.pkg._base.PackageManager.update" name="OS.pkg._base.PackageManager.update">
-<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a24dc28b910768a2560b8797193426d45" title="OS.pkg._base.PackageManager.\l_execAsRoot_pkgManagerCommand" alt="" coords="309,5,547,46"/>
-<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#a25545fba18d17abee9fe2be65dc5b0a3" title="OS.pkg._apt.AptInstaller.\l_update" alt="" coords="347,70,509,111"/>
-<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a86dd2e22dbc4e0873e955137ab7aa3f4" title="OS.pkg._base.PackageManager.\l_update" alt="" coords="321,135,535,177"/>
-<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a96d015bb45e8fae7278a77e4e0c251df" title="OS.pkg._base.PackageManager.\l_execAsRoot_withPkgs" alt="" coords="321,201,535,242"/>
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a24dc28b910768a2560b8797193426d45" title="OS.pkg._base.PackageManager.\l_execAsRoot_pkgManagerCommand" alt="" coords="313,5,557,46"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#a25545fba18d17abee9fe2be65dc5b0a3" title="OS.pkg._apt.AptInstaller.\l_update" alt="" coords="349,70,520,111"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a86dd2e22dbc4e0873e955137ab7aa3f4" title="OS.pkg._base.PackageManager.\l_update" alt="" coords="325,135,544,177"/>
+<area shape="rect" id="node5" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a96d015bb45e8fae7278a77e4e0c251df" title="OS.pkg._base.PackageManager.\l_execAsRoot_withPkgs" alt="" coords="325,201,544,242"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="OS.pkg._base.PackageManager.updatePackageIndex" name="OS.pkg._base.PackageManager.updatePackageIndex">
-<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#a264c47c1b469c721589b01f1a44ca951" title="OS.pkg._apt.AptInstaller.is\lAvailable" alt="" coords="315,5,487,46"/>
-<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__macports_1_1_mac_port_installer.html#aba17b213e94c17bf5501cc5ab45e56b7" title="OS.pkg._macports.MacPort\lInstaller.isAvailable" alt="" coords="312,70,491,111"/>
-<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__yum_1_1_yum_installer.html#a6690bd069e3028c0deb55caae9fa4ddc" title="OS.pkg._yum.YumInstaller.is\lInstalled" alt="" coords="310,135,493,177"/>
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#a264c47c1b469c721589b01f1a44ca951" title="OS.pkg._apt.AptInstaller.is\lAvailable" alt="" coords="319,5,499,46"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__macports_1_1_mac_port_installer.html#aba17b213e94c17bf5501cc5ab45e56b7" title="OS.pkg._macports.MacPort\lInstaller.isAvailable" alt="" coords="317,70,502,111"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1pkg_1_1__yum_1_1_yum_installer.html#a6690bd069e3028c0deb55caae9fa4ddc" title="OS.pkg._yum.YumInstaller.is\lInstalled" alt="" coords="313,135,506,177"/>
 </map>

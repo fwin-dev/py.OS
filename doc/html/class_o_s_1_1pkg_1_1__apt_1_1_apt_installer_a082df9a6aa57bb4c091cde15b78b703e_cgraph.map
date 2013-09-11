@@ -1,4 +1,4 @@
 <map id="OS.pkg._apt.AptInstaller.updateKernel" name="OS.pkg._apt.AptInstaller.updateKernel">
-<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a24dc28b910768a2560b8797193426d45" title="OS.pkg._base.PackageManager.\l_execAsRoot_pkgManagerCommand" alt="" coords="256,5,493,46"/>
-<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#ab1fd18f6db1d9063c114c0b21f96ce0b" title="OS.pkg._apt.AptInstaller.\l_updateKernel" alt="" coords="293,70,456,111"/>
+<area shape="rect" id="node2" href="$class_o_s_1_1pkg_1_1__base_1_1_package_manager.html#a24dc28b910768a2560b8797193426d45" title="OS.pkg._base.PackageManager.\l_execAsRoot_pkgManagerCommand" alt="" coords="265,5,509,46"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1pkg_1_1__apt_1_1_apt_installer.html#ab1fd18f6db1d9063c114c0b21f96ce0b" title="OS.pkg._apt.AptInstaller.\l_updateKernel" alt="" coords="301,70,472,111"/>
 </map>

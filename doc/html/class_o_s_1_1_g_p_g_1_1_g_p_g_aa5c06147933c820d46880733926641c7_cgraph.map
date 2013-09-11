@@ -1,6 +1,6 @@
 <map id="OS.GPG.GPG.importPublicKey_signTrust" name="OS.GPG.GPG.importPublicKey_signTrust">
-<area shape="rect" id="node2" href="$class_o_s_1_1_g_p_g_1_1_g_p_g.html#a5a277f4ab5310eaac18c939d88b58a1c" title="OS.GPG.GPG.importPublicKey" alt="" coords="257,5,460,32"/>
-<area shape="rect" id="node3" href="$class_o_s_1_1_g_p_g_1_1_g_p_g.html#a84cc5f9f7bfdcdea2089b8cd5f368c3d" title="Gets first key ID of the key in filename." alt="" coords="275,56,442,83"/>
-<area shape="rect" id="node4" href="$class_o_s_1_1_g_p_g_1_1_g_p_g.html#a0e633b7b40398af8253875bc4f0c81e0" title="LIMITATION: If key is already signed, gnupg prints out key information to terminal even if stdout is ..." alt="" coords="279,107,438,133"/>
-<area shape="rect" id="node5" href="$class_o_s_1_1_g_p_g_1_1_g_p_g.html#a8fe9d92003c881c3936b26934d2862fd" title="LIMITATION: Owner trust of key can&#39;t be set non&#45;interactively for it due to limitations in the gnupg ..." alt="" coords="257,157,461,184"/>
+<area shape="rect" id="node2" href="$class_o_s_1_1_g_p_g_1_1_g_p_g.html#a5a277f4ab5310eaac18c939d88b58a1c" title="OS.GPG.GPG.importPublicKey" alt="" coords="263,5,471,32"/>
+<area shape="rect" id="node3" href="$class_o_s_1_1_g_p_g_1_1_g_p_g.html#a84cc5f9f7bfdcdea2089b8cd5f368c3d" title="Gets first key ID of the key in filename. " alt="" coords="283,56,450,83"/>
+<area shape="rect" id="node4" href="$class_o_s_1_1_g_p_g_1_1_g_p_g.html#a0e633b7b40398af8253875bc4f0c81e0" title="LIMITATION: If key is already signed, gnupg prints out key information to terminal even if stdout is ..." alt="" coords="287,107,446,133"/>
+<area shape="rect" id="node5" href="$class_o_s_1_1_g_p_g_1_1_g_p_g.html#a8fe9d92003c881c3936b26934d2862fd" title="LIMITATION: Owner trust of key can&#39;t be set non&#45;interactively for it due to limitations in the gnupg ..." alt="" coords="262,157,471,184"/>
 </map>
